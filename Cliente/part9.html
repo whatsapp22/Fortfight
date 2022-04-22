@@ -22,7 +22,7 @@
             default: 'arcade',
             arcade: {
                 gravity: { y: 300 },
-                debug: false
+                debug: true
             }
         },
         scene: {
@@ -140,7 +140,7 @@
     {
         star.disableBody(true, true);
 
-        score += 10;
+        score += 50;
         scoreText.setText('Score: ' + score);
     }
 

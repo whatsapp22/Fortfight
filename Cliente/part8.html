@@ -14,130 +14,47 @@
 
 <script type="text/javascript">
 
-    var config = {
-        type: Phaser.AUTO,
-        width: 800,
-        height: 600,
-        physics: {
-            default: 'arcade',
-            arcade: {
-                gravity: { y: 300 },
-                debug: false
-            }
-        },
-        scene: {
-            preload: preload,
-            create: create,
-            update: update
-        }
-    };
+const config = {
+  type: Phaser.AUTO, // Which renderer to use
+  width: 800, // Canvas width in pixels
+  height: 600, // Canvas height in pixels
+  parent: "game-container", // ID of the DOM element to add the canvas to
+  scene: {
+    preload: preload,
+    create: create,
+    update: update
+  }
+};
 
-    var player;
-    var stars;
-    var platforms;
-    var cursors;
+const game = new Phaser.Game(config);
 
-    var game = new Phaser.Game(config);
+function update(time, delta) {
+  // Runs once per frame for the duration of the scene
+}
+function preload() {
+  this.load.image('mario','assets/mario.png');
+}
+function create() {
+  // Load a map from a 2D array of tile indices
+  const level = [
+    [  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0 ],
+    [  0,   1,   2,   3,   0,   0,   0,   1,   2,   3,   0 ],
+    [  0,   5,   6,   7,   0,   0,   0,   5,   6,   7,   0 ],
+    [  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0 ],
+    [  0,   0,   0,  14,  13,  14,   0,   0,   0,   0,   0 ],
+    [  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0 ],
+    [  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0 ],
+    [  0,   0,  14,  14,  14,  14,  14,   0,   0,   0,  15 ],
+    [  0,   0,   0,   0,   0,   0,   0,   0,   0,  15,  15 ],
+    [ 35,  36,  37,   0,   0,   0,   0,   0,  15,  15,  15 ],
+    [ 39,  39,  39,  39,  39,  39,  39,  39,  39,  39,  39 ]
+  ];
 
-    function preload ()
-    {
-        this.load.image('sky', 'assets/sky.png');
-        this.load.image('ground', 'assets/platform.png');
-        this.load.image('star', 'assets/star.png');
-        this.load.image('bomb', 'assets/bomb.png');
-        this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
-    }
-
-    function create ()
-    {
-        this.add.image(400, 300, 'sky');
-
-        platforms = this.physics.add.staticGroup();
-
-        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-
-        platforms.create(600, 400, 'ground');
-        platforms.create(50, 250, 'ground');
-        platforms.create(750, 220, 'ground');
-
-        player = this.physics.add.sprite(100, 450, 'dude');
-
-        player.setBounce(0.2);
-        player.setCollideWorldBounds(true);
-
-        this.anims.create({
-            key: 'left',
-            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-            frameRate: 10,
-            repeat: -1
-        });
-
-        this.anims.create({
-            key: 'turn',
-            frames: [ { key: 'dude', frame: 4 } ],
-            frameRate: 20
-        });
-
-        this.anims.create({
-            key: 'right',
-            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-            frameRate: 10,
-            repeat: -1
-        });
-
-        cursors = this.input.keyboard.createCursorKeys();
-
-        stars = this.physics.add.group({
-            key: 'star',
-            repeat: 11,
-            setXY: { x: 12, y: 0, stepX: 70 }
-        });
-
-        stars.children.iterate(function (child) {
-
-            child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-
-        });
-
-        this.physics.add.collider(player, platforms);
-        this.physics.add.collider(stars, platforms);
-
-        this.physics.add.overlap(player, stars, collectStar, null, this);
-    }
-
-    function update ()
-    {
-        if (cursors.left.isDown)
-        {
-            player.setVelocityX(-160);
-
-            player.anims.play('left', true);
-        }
-        else if (cursors.right.isDown)
-        {
-            player.setVelocityX(160);
-
-            player.anims.play('right', true);
-        }
-        else
-        {
-            player.setVelocityX(0);
-
-            player.anims.play('turn');
-        }
-
-        if (cursors.up.isDown && player.body.touching.down)
-        {
-            player.setVelocityY(-330);
-        }
-    }
-
-    function collectStar (player, star)
-    {
-        star.disableBody(true, true);
-    }
-
-</script>
-
-</body>
-</html>
+  // When loading from an array, make sure to specify the tileWidth and tileHeight
+  const map = this.make.tilemap({ data: level, tileWidth: 16, tileHeight: 16 });
+  const tiles = map.addTilesetImage('mario');
+  const layer = map.createLayer(0, tiles, 0, 0); 
+  }
+  function update(time, delta) {
+  // Runs once per frame for the duration of the scene
+}
