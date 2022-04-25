@@ -1,28 +1,54 @@
 var cena1 = new Phaser.Scene("Cena 1");
 
 var carta1 = {
-  fundo: "imagem1.png",
+  fundo: "cartlincoln.png",
+  habilidade: {
+    valor: "80",
+    imagem: "habilidadelincoln.png",
+  },
+  conhecimento: {
+    valor: "10",
+    imagem: "conhecimentolincoln.png",
+  },
+  simpatia: {
+    valor: "70",
+    imagem: "simpatialincoln.png",
+  },
   altura: {
     valor: "170",
-    imagem: "altura.png"
-  }
+    imagem: "alturalincoln.png",
+  },
+  idade: {
+    valor: "100",
+    imagem: "idadelincoln.png",
+  },
 };
 
 
-var carta2;
-var habilidade1;
-var simpatia1;
-var conhecimento1;
-var habilidade2;
-var simpatia2;
+var carta2 = {
+  fundo: "cartlincoln.png",
+  habilidade: {
+    valor: "80",
+    imagem: "habilidadelincoln.png",
+  },
+  conhecimento: {
+    valor: "10",
+    imagem: "conhecimentolincoln.png",
+  },
+  simpatia: {
+    valor: "70",
+    imagem: "simpatialincoln.png",
+  },
+  altura: {
+    valor: "170",
+    imagem: "alturalincoln.png",
+  },
+  idade: {
+    valor: "100",
+    imagem: "idadelincoln.png",
+  },
+};
 
-var conhecimento2;
-var altura1;
-var altura2;
-var idade1;
-var idade2;
-
-habilidade1 = habilidade2;
 
 cena1.preload = function () {
   this.load.image("fundi", "assets/fundi.png");
