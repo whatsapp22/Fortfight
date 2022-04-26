@@ -26,26 +26,26 @@ var carta1 = {
 
 
 var carta2 = {
-  fundo: "cartlincoln.png",
+  fundo: "cartferrari.png",
   habilidade: {
-    valor: "80",
-    imagem: "habilidadelincoln.png",
+    valor: "50",
+    imagem: "habilidadeferrari.png",
   },
   conhecimento: {
-    valor: "10",
-    imagem: "conhecimentolincoln.png",
+    valor: "99",
+    imagem: "conhecimentoferrari.png",
   },
   simpatia: {
-    valor: "70",
-    imagem: "simpatialincoln.png",
+    valor: "81",
+    imagem: "simpatiaferrari.png",
   },
   altura: {
-    valor: "170",
-    imagem: "alturalincoln.png",
+    valor: "150",
+    imagem: "alturaferrari.png",
   },
   idade: {
-    valor: "100",
-    imagem: "idadelincoln.png",
+    valor: "15",
+    imagem: "idadeferrari.png",
   },
 };
 
