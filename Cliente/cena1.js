@@ -77,6 +77,10 @@ var carta1 = cartas[Math.floor(Math.random() * 2)];
 console.log(carta1);
 var carta2 = cartas[Math.floor(Math.random() * 2)];
 
+// Placar
+var placar;
+var placarTexto;
+
 cena1.preload = function () {
   this.load.image("fundi", "assets/fundi.png");
   this.load.image("carta1.fundo", carta1.fundo);
@@ -95,6 +99,19 @@ cena1.preload = function () {
 
 cena1.create = function () {
   this.add.image(400, 300, "fundi");
+
+  // Placar
+  if (Math.round(Math.random()) === 0) {
+    placar = "esquerda";
+  } else {
+    placar = "direita";
+  };
+  placarTexto = this.add.text(16, 16, placar, {
+    fontSize: "32px",
+    fill: "#ffffff",
+  });
+  placarTexto.setScrollFactor(0);
+
   var carta1fundo = this.add.image(200, 300, "carta1.fundo").setInteractive();
   var habilidade1 = this.add
     .image(200, 330, "carta1.habilidade")
@@ -105,6 +122,7 @@ cena1.create = function () {
     .setInteractive();
   var altura1 = this.add.image(200, 415, "carta1.altura").setInteractive();
   var idade1 = this.add.image(200, 445, "carta1.idade").setInteractive();
+
   var carta2fundo = this.add.image(600, 300, "carta2.fundo").setInteractive();
   var habilidade2 = this.add
     .image(600, 330, "carta2.habilidade")
@@ -119,120 +137,129 @@ cena1.create = function () {
   habilidade1.on(
     "pointerdown",
     function () {
-      // carta1.setVisible(false);
-      carta1fundo.setVisible(false);
+      carta1fundo.setVisible(true);
       habilidade1.setVisible(true);
       simpatia1.setVisible(false);
       conhecimento1.setVisible(false);
       altura1.setVisible(false);
       idade1.setVisible(false);
-      //carta2.setVisible(true);
-    },
-    this
-  );
-
-  simpatia1.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta1fundo.setVisible(false);
-    habilidade1.setVisible(false);
-    simpatia1.setVisible(true);
-    conhecimento1.setVisible(false);
-    altura1.setVisible(false);
-    idade1.setVisible(false);
-    //carta2.setVisible(true);
-  });
-
-  conhecimento1.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta1fundo.setVisible(false);
-    habilidade1.setVisible(false);
-    simpatia1.setVisible(false);
-    conhecimento1.setVisible(true);
-    altura1.setVisible(false);
-    idade1.setVisible(false);
-    //carta2.setVisible(true);
-  });
-
-  idade1.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta1fundo.setVisible(false);
-    habilidade1.setVisible(false);
-    simpatia1.setVisible(false);
-    conhecimento1.setVisible(false);
-    altura1.setVisible(true);
-    idade1.setVisible(false);
-    //carta2.setVisible(true);
-  });
-  altura1.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta1fundo.setVisible(false);
-    habilidade1.setVisible(false);
-    simpatia1.setVisible(false);
-    conhecimento1.setVisible(false);
-    altura1.setVisible(false);
-    idade1.setVisible(true);
-    //carta2.setVisible(true);
-  });
-
-  habilidade2.on(
-    "pointerdown",
-    function () {
-      // carta1.setVisible(false);
-      carta2fundo.setVisible(false);
+      carta2fundo.setVisible(true);
       habilidade2.setVisible(true);
       simpatia2.setVisible(false);
       conhecimento2.setVisible(false);
       altura2.setVisible(false);
       idade2.setVisible(false);
-      //carta2.setVisible(true);
     },
     this
   );
 
-  simpatia2.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta2fundo.setVisible(false);
+  simpatia1.on("pointerdown", function () {
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(true);
+    conhecimento1.setVisible(false);
+    altura1.setVisible(false);
+    idade1.setVisible(false);
+    carta2fundo.setVisible(true);
     habilidade2.setVisible(false);
     simpatia2.setVisible(true);
     conhecimento2.setVisible(false);
     altura2.setVisible(false);
     idade2.setVisible(false);
-    //carta2.setVisible(true);
   });
 
-  conhecimento2.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta2fundo.setVisible(false);
+  conhecimento1.on("pointerdown", function () {
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(false);
+    conhecimento1.setVisible(true);
+    altura1.setVisible(false);
+    idade1.setVisible(false);
+    carta2fundo.setVisible(true);
     habilidade2.setVisible(false);
     simpatia2.setVisible(false);
     conhecimento2.setVisible(true);
     altura2.setVisible(false);
     idade2.setVisible(false);
-    //carta2.setVisible(true);
   });
 
-  idade2.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta2fundo.setVisible(false);
+  altura1.on("pointerdown", function () {
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(false);
+    conhecimento1.setVisible(false);
+    altura1.setVisible(true);
+    idade1.setVisible(false);
+    carta2fundo.setVisible(true);
     habilidade2.setVisible(false);
     simpatia2.setVisible(false);
     conhecimento2.setVisible(false);
     altura2.setVisible(true);
     idade2.setVisible(false);
-    //carta2.setVisible(true);
   });
-  altura2.on("pointerdown", function () {
-    // carta1.setVisible(false);
-    carta2fundo.setVisible(false);
+  idade1.on("pointerdown", function () {
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(false);
+    conhecimento1.setVisible(false);
+    altura1.setVisible(false);
+    idade1.setVisible(true);
+    carta2fundo.setVisible(true);
     habilidade2.setVisible(false);
     simpatia2.setVisible(false);
     conhecimento2.setVisible(false);
     altura2.setVisible(false);
     idade2.setVisible(true);
-    //carta2.setVisible(true);
+  });
+
+  habilidade2.on(
+    "pointerdown",
+    function () {
+      carta2fundo.setVisible(true);
+      habilidade2.setVisible(true);
+      simpatia2.setVisible(false);
+      conhecimento2.setVisible(false);
+      altura2.setVisible(false);
+      idade2.setVisible(false);
+    },
+    this
+  );
+
+  simpatia2.on("pointerdown", function () {
+    carta2fundo.setVisible(true);
+    habilidade2.setVisible(false);
+    simpatia2.setVisible(true);
+    conhecimento2.setVisible(false);
+    altura2.setVisible(false);
+    idade2.setVisible(false);
+  });
+
+  conhecimento2.on("pointerdown", function () {
+    carta2fundo.setVisible(true);
+    habilidade2.setVisible(false);
+    simpatia2.setVisible(false);
+    conhecimento2.setVisible(true);
+    altura2.setVisible(false);
+    idade2.setVisible(false);
+  });
+
+  idade2.on("pointerdown", function () {
+    carta2fundo.setVisible(true);
+    habilidade2.setVisible(false);
+    simpatia2.setVisible(false);
+    conhecimento2.setVisible(false);
+    altura2.setVisible(true);
+    idade2.setVisible(false);
+  });
+  altura2.on("pointerdown", function () {
+    carta2fundo.setVisible(true);
+    habilidade2.setVisible(false);
+    simpatia2.setVisible(false);
+    conhecimento2.setVisible(false);
+    altura2.setVisible(false);
+    idade2.setVisible(true);
     if (carta1.altura.valor > carta2.altura.valor) {
     } else {
-    
     }
   });
 };
