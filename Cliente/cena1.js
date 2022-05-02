@@ -1,5 +1,5 @@
 var cena1 = new Phaser.Scene("Cena 1");
-
+import { cena2 } from "./cena2.js";
 var cartas = [
   {
     fundo: "assets/cartlincoln.png",
@@ -43,7 +43,7 @@ var cartas = [
       imagem: "assets/alturalincoln.png",
     },
     idade: {
-      valor: "100",
+      valor: "90",
       imagem: "assets/idadelincoln.png",
     },
   },
@@ -79,7 +79,9 @@ var carta2 = cartas[Math.floor(Math.random() * 2)];
 
 // Placar
 var placar;
-var placarTexto;
+var placarTexto1;
+var placarTexto2;
+var imagembloqueio;
 
 cena1.preload = function () {
   this.load.image("fundi", "assets/fundi.png");
@@ -95,22 +97,21 @@ cena1.preload = function () {
   this.load.image("carta2.conhecimento", carta2.conhecimento.imagem);
   this.load.image("carta2.altura", carta2.altura.imagem);
   this.load.image("carta2.idade", carta2.idade.imagem);
+  this.load.image("capture", "assets/capture.png");
 };
 
 cena1.create = function () {
   this.add.image(400, 300, "fundi");
 
   // Placar
-  if (Math.round(Math.random()) === 0) {
-    placar = "esquerda";
-  } else {
-    placar = "direita";
-  };
-  placarTexto = this.add.text(16, 16, placar, {
+  placarTexto1 = this.add.text(100, 75, placar, {
     fontSize: "32px",
     fill: "#ffffff",
   });
-  placarTexto.setScrollFactor(0);
+  placarTexto2 = this.add.text(450, 75, placar, {
+    fontSize: "32px",
+    fill: "#ffffff",
+  });
 
   var carta1fundo = this.add.image(200, 300, "carta1.fundo").setInteractive();
   var habilidade1 = this.add
@@ -133,6 +134,23 @@ cena1.create = function () {
     .setInteractive();
   var altura2 = this.add.image(600, 415, "carta2.altura").setInteractive();
   var idade2 = this.add.image(600, 445, "carta2.idade").setInteractive();
+
+  if (Math.round(Math.random()) === 0) {
+    placar = "It's Your turn!!";
+    placarTexto1.setVisible(true);
+    placarTexto1.setText(placar);
+    placarTexto2.setVisible(false);
+    var imagembloqueio = this.add.image(600, 300, "capture").setInteractive();
+  } else {
+    placar = "Its Your Turn!!";
+    placarTexto1.setVisible(false);
+    placarTexto2.setVisible(true);
+    placarTexto2.setText(placar);
+    //imagem de bloqueio
+    var imagembloqueio = this.add.image(200, 300, "capture").setInteractive();
+  }
+
+
 
   habilidade1.on(
     "pointerdown",
@@ -221,6 +239,12 @@ cena1.create = function () {
       conhecimento2.setVisible(false);
       altura2.setVisible(false);
       idade2.setVisible(false);
+      carta1fundo.setVisible(true);
+      habilidade1.setVisible(true);
+      simpatia1.setVisible(false);
+      conhecimento1.setVisible(false);
+      altura1.setVisible(false);
+      idade1.setVisible(false);
     },
     this
   );
@@ -232,6 +256,12 @@ cena1.create = function () {
     conhecimento2.setVisible(false);
     altura2.setVisible(false);
     idade2.setVisible(false);
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(true);
+    conhecimento1.setVisible(false);
+    altura1.setVisible(false);
+    idade1.setVisible(false);
   });
 
   conhecimento2.on("pointerdown", function () {
@@ -241,25 +271,45 @@ cena1.create = function () {
     conhecimento2.setVisible(true);
     altura2.setVisible(false);
     idade2.setVisible(false);
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(false);
+    conhecimento1.setVisible(true);
+    altura1.setVisible(false);
+    idade1.setVisible(false);
   });
 
-  idade2.on("pointerdown", function () {
+  altura2.on("pointerdown", function () {
     carta2fundo.setVisible(true);
     habilidade2.setVisible(false);
     simpatia2.setVisible(false);
     conhecimento2.setVisible(false);
     altura2.setVisible(true);
     idade2.setVisible(false);
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(false);
+    conhecimento1.setVisible(false);
+    altura1.setVisible(true);
+    idade1.setVisible(false);
   });
-  altura2.on("pointerdown", function () {
+  idade2.on("pointerdown", function () {
     carta2fundo.setVisible(true);
     habilidade2.setVisible(false);
     simpatia2.setVisible(false);
     conhecimento2.setVisible(false);
     altura2.setVisible(false);
     idade2.setVisible(true);
+    carta1fundo.setVisible(true);
+    habilidade1.setVisible(false);
+    simpatia1.setVisible(false);
+    conhecimento1.setVisible(false);
+    altura1.setVisible(false);
+    idade1.setVisible(true);
     if (carta1.altura.valor > carta2.altura.valor) {
+      this.scene.start(cena2);
     } else {
+      this.scene.start(cena2);
     }
   });
 };

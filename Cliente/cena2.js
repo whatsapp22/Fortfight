@@ -1,4 +1,4 @@
-var cena1 = new Phaser.Scene("Cena 2");
+var cena2 = new Phaser.Scene("Cena 2");
 
 
 
@@ -8,4 +8,4 @@ var cena1 = new Phaser.Scene("Cena 2");
 
 
 
-export { cena1 };
+export { cena2 };
