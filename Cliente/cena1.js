@@ -82,6 +82,9 @@ var placar;
 var placarTexto1;
 var placarTexto2;
 var imagembloqueio;
+var ganhadora;
+var vencedor;
+var textven;
 
 cena1.preload = function () {
   this.load.image("fundi", "assets/fundi.png");
@@ -112,6 +115,12 @@ cena1.create = function () {
     fontSize: "32px",
     fill: "#ffffff",
   });
+  vencedor = this.add.text(20, 50, textven, {
+    fontSize: "32px",
+    fill: "#ffffff",
+  });
+
+
 
   var carta1fundo = this.add.image(200, 300, "carta1.fundo").setInteractive();
   var habilidade1 = this.add
@@ -150,8 +159,6 @@ cena1.create = function () {
     var imagembloqueio = this.add.image(200, 300, "capture").setInteractive();
   }
 
-
-
   habilidade1.on(
     "pointerdown",
     function () {
@@ -167,6 +174,20 @@ cena1.create = function () {
       conhecimento2.setVisible(false);
       altura2.setVisible(false);
       idade2.setVisible(false);
+      imagembloqueio.setVisible(false);
+      if (carta1.altura.valor > carta2.altura.valor) {
+        placarTexto1.setVisible(false);
+        placarTexto2.setVisible(false);
+        vencedor.setVisible(true);
+        textven = "O JOGADOR 1 GANHOUUU";
+        vencedor.setText(textven);
+      } else {
+        placarTexto1.setVisible(false);
+        placarTexto2.setVisible(false);
+        vencedor.setVisible(true);
+        textven = "O JOGADOR 2 GANHOUUU";
+        vencedor.setText(textven);
+      }
     },
     this
   );
@@ -184,6 +205,20 @@ cena1.create = function () {
     conhecimento2.setVisible(false);
     altura2.setVisible(false);
     idade2.setVisible(false);
+    imagembloqueio.setVisible(false);
+    if (carta1.altura.valor > carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
+      vencedor.setText(textven);
+    } else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    }
   });
 
   conhecimento1.on("pointerdown", function () {
@@ -199,6 +234,20 @@ cena1.create = function () {
     conhecimento2.setVisible(true);
     altura2.setVisible(false);
     idade2.setVisible(false);
+    imagembloqueio.setVisible(false);
+    if (carta1.altura.valor > carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
+      vencedor.setText(textven);
+    } else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    }
   });
 
   altura1.on("pointerdown", function () {
@@ -214,6 +263,20 @@ cena1.create = function () {
     conhecimento2.setVisible(false);
     altura2.setVisible(true);
     idade2.setVisible(false);
+    imagembloqueio.setVisible(false);
+    if (carta1.altura.valor > carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
+      vencedor.setText(textven);
+    } else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    }
   });
   idade1.on("pointerdown", function () {
     carta1fundo.setVisible(true);
@@ -228,6 +291,20 @@ cena1.create = function () {
     conhecimento2.setVisible(false);
     altura2.setVisible(false);
     idade2.setVisible(true);
+    imagembloqueio.setVisible(false);
+    if (carta1.altura.valor > carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
+      vencedor.setText(textven);
+    } else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    }
   });
 
   habilidade2.on(
@@ -245,6 +322,20 @@ cena1.create = function () {
       conhecimento1.setVisible(false);
       altura1.setVisible(false);
       idade1.setVisible(false);
+      imagembloqueio.setVisible(false);
+      if (carta1.altura.valor > carta2.altura.valor) {
+        placarTexto1.setVisible(false);
+        placarTexto2.setVisible(false);
+        vencedor.setVisible(true);
+        textven = "O JOGADOR 1 GANHOUUU";
+        vencedor.setText(textven);
+      } else {
+        placarTexto1.setVisible(false);
+        placarTexto2.setVisible(false);
+        vencedor.setVisible(true);
+        textven = "O JOGADOR 2 GANHOUUU";
+        vencedor.setText(textven);
+      }
     },
     this
   );
@@ -262,6 +353,20 @@ cena1.create = function () {
     conhecimento1.setVisible(false);
     altura1.setVisible(false);
     idade1.setVisible(false);
+    imagembloqueio.setVisible(false);
+    if (carta1.altura.valor > carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
+      vencedor.setText(textven);
+    } else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    }
   });
 
   conhecimento2.on("pointerdown", function () {
@@ -277,6 +382,20 @@ cena1.create = function () {
     conhecimento1.setVisible(true);
     altura1.setVisible(false);
     idade1.setVisible(false);
+    imagembloqueio.setVisible(false);
+    if (carta1.altura.valor > carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
+      vencedor.setText(textven);
+    } else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    }
   });
 
   altura2.on("pointerdown", function () {
@@ -292,6 +411,20 @@ cena1.create = function () {
     conhecimento1.setVisible(false);
     altura1.setVisible(true);
     idade1.setVisible(false);
+    imagembloqueio.setVisible(false);
+    if (carta1.altura.valor > carta2.altura.valor) {
+            placarTexto1.setVisible(false);
+            placarTexto2.setVisible(false);
+            vencedor.setVisible(true);
+            textven = "O JOGADOR 1 GANHOUUU";
+            vencedor.setText(textven);
+    } else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    }
   });
   idade2.on("pointerdown", function () {
     carta2fundo.setVisible(true);
@@ -306,14 +439,26 @@ cena1.create = function () {
     conhecimento1.setVisible(false);
     altura1.setVisible(false);
     idade1.setVisible(true);
-    if (carta1.altura.valor > carta2.altura.valor) {
-      this.scene.start(cena2);
-    } else {
-      this.scene.start(cena2);
-    }
-  });
-};
+    imagembloqueio.setVisible(false);
 
-cena1.update = function () {};
+    if (carta1.altura.valor > carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true)
+      textven = 'O JOGADOR 1 GANHOUUU';
+      vencedor.setText(textven);
+    }
+    else {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 2 GANHOUUU";
+      vencedor.setText(textven);
+    };
+  })
+}
+
+cena1.update = function () {
+};
 
 export { cena1 };
