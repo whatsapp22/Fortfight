@@ -4,7 +4,7 @@ var cartas = [
   {
     fundo: "assets/cartlincoln.png",
     habilidade: {
-      valor: "80",
+      valor: "90",
       imagem: "assets/habilidadelincoln.png", // cartas[0].habilidade.imagem
     },
     conhecimento: {
@@ -27,29 +27,6 @@ var cartas = [
   {
     fundo: "assets/cartlincoln.png",
     habilidade: {
-      valor: "80",
-      imagem: "assets/habilidadelincoln.png", // cartas[0].habilidade.imagem
-    },
-    conhecimento: {
-      valor: "10",
-      imagem: "assets/conhecimentolincoln.png",
-    },
-    simpatia: {
-      valor: "70",
-      imagem: "assets/simpatialincoln.png",
-    },
-    altura: {
-      valor: "170",
-      imagem: "assets/alturalincoln.png",
-    },
-    idade: {
-      valor: "90",
-      imagem: "assets/idadelincoln.png",
-    },
-  },
-  /*{
-    fundo: "assets/cartferrari.png",
-    habilidade: {
       valor: "50",
       imagem: "assets/habilidadeferrari.png",
     },
@@ -69,13 +46,14 @@ var cartas = [
       valor: "15",
       imagem: "assets/idadeferrari.png",
     },
-  },*/
+  },
 ];
 
 // Descobrir a primeira carta
 var carta1 = cartas[Math.floor(Math.random() * 2)];
 console.log(carta1);
 var carta2 = cartas[Math.floor(Math.random() * 2)];
+console.log(carta2);
 
 // Placar
 var placar;
@@ -85,6 +63,7 @@ var imagembloqueio;
 var ganhadora;
 var vencedor;
 var textven;
+var textven2;
 
 cena1.preload = function () {
   this.load.image("fundi", "assets/fundi.png");
@@ -119,8 +98,6 @@ cena1.create = function () {
     fontSize: "32px",
     fill: "#ffffff",
   });
-
-
 
   var carta1fundo = this.add.image(200, 300, "carta1.fundo").setInteractive();
   var habilidade1 = this.add
@@ -175,18 +152,20 @@ cena1.create = function () {
       altura2.setVisible(false);
       idade2.setVisible(false);
       imagembloqueio.setVisible(false);
-      if (carta1.altura.valor > carta2.altura.valor) {
+      if (carta1.habilidade.valor > carta2.habilidade.valor) {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
         textven = "O JOGADOR 1 GANHOUUU";
         vencedor.setText(textven);
-      } else {
+      } else if (carta1.habilidade.valor < carta2.habilidade.valor) {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
         textven = "O JOGADOR 2 GANHOUUU";
         vencedor.setText(textven);
+      } else {
+        // empate
       }
     },
     this
@@ -206,7 +185,7 @@ cena1.create = function () {
     altura2.setVisible(false);
     idade2.setVisible(false);
     imagembloqueio.setVisible(false);
-    if (carta1.altura.valor > carta2.altura.valor) {
+    if (carta1.simpatia.valor > carta2.simpatia.valor) {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
@@ -235,7 +214,7 @@ cena1.create = function () {
     altura2.setVisible(false);
     idade2.setVisible(false);
     imagembloqueio.setVisible(false);
-    if (carta1.altura.valor > carta2.altura.valor) {
+    if (carta1.conhecimento.valor > carta2.conhecimento.valor) {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
@@ -292,7 +271,7 @@ cena1.create = function () {
     altura2.setVisible(false);
     idade2.setVisible(true);
     imagembloqueio.setVisible(false);
-    if (carta1.altura.valor > carta2.altura.valor) {
+    if (carta1.idade.valor > carta2.idade.valor) {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
@@ -323,7 +302,7 @@ cena1.create = function () {
       altura1.setVisible(false);
       idade1.setVisible(false);
       imagembloqueio.setVisible(false);
-      if (carta1.altura.valor > carta2.altura.valor) {
+      if (carta1.habilidade.valor > carta2.habilidade.valor) {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
@@ -354,7 +333,7 @@ cena1.create = function () {
     altura1.setVisible(false);
     idade1.setVisible(false);
     imagembloqueio.setVisible(false);
-    if (carta1.altura.valor > carta2.altura.valor) {
+    if (carta1.simpatia.valor > carta2.simpatia.valor) {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
@@ -383,7 +362,7 @@ cena1.create = function () {
     altura1.setVisible(false);
     idade1.setVisible(false);
     imagembloqueio.setVisible(false);
-    if (carta1.altura.valor > carta2.altura.valor) {
+    if (carta1.conhecimento.valor > carta2.conhecimento.valor) {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
@@ -413,11 +392,11 @@ cena1.create = function () {
     idade1.setVisible(false);
     imagembloqueio.setVisible(false);
     if (carta1.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "O JOGADOR 1 GANHOUUU";
-            vencedor.setText(textven);
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
+      vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
@@ -441,24 +420,22 @@ cena1.create = function () {
     idade1.setVisible(true);
     imagembloqueio.setVisible(false);
 
-    if (carta1.altura.valor > carta2.altura.valor) {
+    if (carta1.idade.valor > carta2.idade.valor) {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
-      vencedor.setVisible(true)
-      textven = 'O JOGADOR 1 GANHOUUU';
+      vencedor.setVisible(true);
+      textven = "O JOGADOR 1 GANHOUUU";
       vencedor.setText(textven);
-    }
-    else {
+    } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
       textven = "O JOGADOR 2 GANHOUUU";
       vencedor.setText(textven);
-    };
-  })
-}
-
-cena1.update = function () {
+    }
+  });
 };
+
+cena1.update = function () {};
 
 export { cena1 };
