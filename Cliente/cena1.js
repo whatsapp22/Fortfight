@@ -2,6 +2,7 @@ var cena1 = new Phaser.Scene("Cena 1");
 import { cena2 } from "./cena2.js";
 var cartas = [
   {
+    name: "lincoln",
     fundo: "assets/cartlincoln.png",
     habilidade: {
       valor: "90",
@@ -24,8 +25,8 @@ var cartas = [
       imagem: "assets/idadelincoln.png",
     },
   },
-  {
-    fundo: "assets/cartlincoln.png",
+  /*{
+    fundo: "assets/cartferrari.png",
     habilidade: {
       valor: "50",
       imagem: "assets/habilidadeferrari.png",
@@ -45,6 +46,30 @@ var cartas = [
     idade: {
       valor: "15",
       imagem: "assets/idadeferrari.png",
+    },
+  },*/
+  {
+    name: "lulsonaro",
+    fundo: "assets/fundolulsonaro.png",
+    habilidade: {
+      valor: "10",
+      imagem: "assets/habilidadelulsonaro.png", // cartas[0].habilidade.imagem
+    },
+    conhecimento: {
+      valor: "0",
+      imagem: "assets/conhecimentolulsonaro.png",
+    },
+    simpatia: {
+      valor: "1000",
+      imagem: "assets/simpatialulsonaro.png",
+    },
+    altura: {
+      valor: "177",
+      imagem: "assets/alturalulsonaro.png",
+    },
+    idade: {
+      valor: "72",
+      imagem: "assets/idadelulsonaro.png",
     },
   },
 ];
@@ -80,6 +105,8 @@ cena1.preload = function () {
   this.load.image("carta2.altura", carta2.altura.imagem);
   this.load.image("carta2.idade", carta2.idade.imagem);
   this.load.image("capture", "assets/capture.png");
+  this.load.image("fundograde", "assets/fundograde.png");
+
 };
 
 cena1.create = function () {
@@ -126,14 +153,14 @@ cena1.create = function () {
     placarTexto1.setVisible(true);
     placarTexto1.setText(placar);
     placarTexto2.setVisible(false);
-    var imagembloqueio = this.add.image(600, 300, "capture").setInteractive();
+    var imagembloqueio = this.add.image(600, 300, "fundograde").setInteractive();
   } else {
     placar = "Its Your Turn!!";
     placarTexto1.setVisible(false);
     placarTexto2.setVisible(true);
     placarTexto2.setText(placar);
     //imagem de bloqueio
-    var imagembloqueio = this.add.image(200, 300, "capture").setInteractive();
+    var imagembloqueio = this.add.image(200, 300, "fundograde").setInteractive();
   }
 
   habilidade1.on(
@@ -156,7 +183,12 @@ cena1.create = function () {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
-        textven = "O JOGADOR 1 GANHOUUU";
+        if (carta1.name="lincoln"){
+          textven = "LINCOLN GANHOU";
+        }
+        else if (carta2.name = "lulsonaro") {
+          textven = "LULSONARO GANHOU";
+        }
         vencedor.setText(textven);
       } else if (carta1.habilidade.valor < carta2.habilidade.valor) {
         placarTexto1.setVisible(false);
@@ -306,6 +338,7 @@ cena1.create = function () {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
+        if (carta)
         textven = "O JOGADOR 1 GANHOUUU";
         vencedor.setText(textven);
       } else {
