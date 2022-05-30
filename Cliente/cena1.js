@@ -21,7 +21,7 @@ var cartas = [
       imagem: "assets/alturalincoln.png",
     },
     idade: {
-      valor: "100",
+      valor: "99",
       imagem: "assets/idadelincoln.png",
     },
   },
@@ -60,7 +60,7 @@ var cartas = [
       imagem: "assets/conhecimentolulsonaro.png",
     },
     simpatia: {
-      valor: "1000",
+      valor: "99",
       imagem: "assets/simpatialulsonaro.png",
     },
     altura: {
@@ -79,6 +79,11 @@ var carta1 = cartas[Math.floor(Math.random() * 2)];
 console.log(carta1);
 var carta2 = cartas[Math.floor(Math.random() * 2)];
 console.log(carta2);
+
+while (carta1.name === carta2.name) {
+  carta2 = cartas[Math.floor(Math.random() * 2)];
+  console.log(carta2);
+}
 
 // Placar
 var placar;
@@ -106,7 +111,6 @@ cena1.preload = function () {
   this.load.image("carta2.idade", carta2.idade.imagem);
   this.load.image("capture", "assets/capture.png");
   this.load.image("fundograde", "assets/fundograde.png");
-
 };
 
 cena1.create = function () {
@@ -153,14 +157,18 @@ cena1.create = function () {
     placarTexto1.setVisible(true);
     placarTexto1.setText(placar);
     placarTexto2.setVisible(false);
-    var imagembloqueio = this.add.image(600, 300, "fundograde").setInteractive();
+    var imagembloqueio = this.add
+      .image(600, 300, "fundograde")
+      .setInteractive();
   } else {
     placar = "Its Your Turn!!";
     placarTexto1.setVisible(false);
     placarTexto2.setVisible(true);
     placarTexto2.setText(placar);
     //imagem de bloqueio
-    var imagembloqueio = this.add.image(200, 300, "fundograde").setInteractive();
+    var imagembloqueio = this.add
+      .image(200, 300, "fundograde")
+      .setInteractive();
   }
 
   habilidade1.on(
@@ -183,21 +191,20 @@ cena1.create = function () {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
-        if (carta1.name="lincoln"){
-          textven = "LINCOLN GANHOU";
-        }
-        else if (carta2.name = "lulsonaro") {
-          textven = "LULSONARO GANHOU";
-        }
+        textven = carta1.name + " GANHOU";
         vencedor.setText(textven);
       } else if (carta1.habilidade.valor < carta2.habilidade.valor) {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
-        textven = "O JOGADOR 2 GANHOUUU";
+        textven = carta2.name + " GANHOU";
         vencedor.setText(textven);
       } else {
-        // empate
+        placarTexto1.setVisible(false);
+        placarTexto2.setVisible(false);
+        vencedor.setVisible(true);
+        textven = "EMPATE";
+        vencedor.setText(textven);
       }
     },
     this
@@ -221,13 +228,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.simpatia.valor < carta2.simpatia.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });
@@ -250,13 +263,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.conhecimento.valor < carta2.conhecimento.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });
@@ -279,13 +298,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.altura.valor < carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });
@@ -307,13 +332,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.idade.valor < carta2.idade.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });
@@ -338,14 +369,19 @@ cena1.create = function () {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
-        if (carta)
-        textven = "O JOGADOR 1 GANHOUUU";
+        textven = carta1.name + " GANHOU";
+        vencedor.setText(textven);
+      } else if (carta1.habilidade.valor < carta2.habilidade.valor) {
+        placarTexto1.setVisible(false);
+        placarTexto2.setVisible(false);
+        vencedor.setVisible(true);
+        textven = carta2.name + " GANHOU";
         vencedor.setText(textven);
       } else {
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(false);
         vencedor.setVisible(true);
-        textven = "O JOGADOR 2 GANHOUUU";
+        textven = "EMPATE";
         vencedor.setText(textven);
       }
     },
@@ -370,13 +406,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.simpatia.valor < carta2.simpatia.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });
@@ -399,13 +441,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.conhecimento.valor < carta2.conhecimento.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });
@@ -428,13 +476,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.altura.valor < carta2.altura.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });
@@ -457,13 +511,19 @@ cena1.create = function () {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 1 GANHOUUU";
+      textven = carta1.name + " GANHOU";
+      vencedor.setText(textven);
+    } else if (carta1.idade.valor < carta2.idade.valor) {
+      placarTexto1.setVisible(false);
+      placarTexto2.setVisible(false);
+      vencedor.setVisible(true);
+      textven = carta2.name + " GANHOU";
       vencedor.setText(textven);
     } else {
       placarTexto1.setVisible(false);
       placarTexto2.setVisible(false);
       vencedor.setVisible(true);
-      textven = "O JOGADOR 2 GANHOUUU";
+      textven = "EMPATE";
       vencedor.setText(textven);
     }
   });

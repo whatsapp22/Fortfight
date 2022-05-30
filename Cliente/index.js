@@ -21,7 +21,7 @@ var config = {
     width: 800,
     height: 600,
   },
-  scene: [cena1, cena2],
+  scene: [cena0, cena1 ],
 };
 
 const game = new Phaser.Game(config);
