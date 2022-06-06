@@ -5,23 +5,23 @@ var cartas = [
     name: "LINCOLN",
     fundo: "assets/cartlincoln.png",
     habilidade: {
-      valor: "90",
+      valor: "70",
       imagem: "assets/habilidadelincoln.png", // cartas[0].habilidade.imagem
     },
     conhecimento: {
-      valor: "10",
+      valor: "50",
       imagem: "assets/conhecimentolincoln.png",
     },
     simpatia: {
-      valor: "70",
+      valor: "90",
       imagem: "assets/simpatialincoln.png",
     },
     altura: {
-      valor: "170",
+      valor: "172",
       imagem: "assets/alturalincoln.png",
     },
     idade: {
-      valor: "99",
+      valor: "19",
       imagem: "assets/idadelincoln.png",
     },
   },
@@ -91,7 +91,7 @@ var carta2;
 
 cena1.preload = function () {
   // Fundo da cena
-  this.load.image("fundi", "assets/fundi.png");
+  this.load.image("fundi", "assets/lua.jpg");
 
   // Carregar todas as cartas
   cartas.forEach((carta) => {
