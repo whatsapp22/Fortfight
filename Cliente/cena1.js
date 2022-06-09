@@ -89,6 +89,7 @@ var newgame;
 var carta1;
 var carta2;
 var proximapartida;
+var contagem = 0;
 
 
 cena1.preload = function () {
@@ -146,6 +147,13 @@ cena1.create = function () {
       carta2 = cartas[Math.floor(Math.random() * 2)];
       console.log(carta2);
     }
+    contagem = contagem + 1;
+    console.log(contagem);
+    
+    if (contagem === 1) {
+      //faz algo aqui
+    }
+    
 
      
       var carta1fundo = game.add.image(200, 301, carta1.fundo).setInteractive();
