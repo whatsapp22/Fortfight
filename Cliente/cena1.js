@@ -89,6 +89,10 @@ var newgame;
 var carta1;
 var carta2;
 var contagem = 0;
+var ganhadorwindireito = 0;
+var perdedorlossdireito = 0;
+var ganhadorwinesquerdo = 0;
+var perdedorlossesquerdo = 0;
 
 cena1.preload = function () {
   // Fundo da cena
@@ -209,7 +213,7 @@ cena1.create = function () {
       vencedor.setVisible(false);
 
       if (Math.round(Math.random()) === 0) {
-        placar = "It's Your turn!!";
+        placar = "É SUA VEZ!!";
         placarTexto1.setVisible(true);
         placarTexto1.setText(placar);
         placarTexto2.setVisible(false);
@@ -217,7 +221,7 @@ cena1.create = function () {
           .image(600, 300, "fundograde")
           .setInteractive();
       } else {
-        placar = "Its Your Turn!!";
+        placar = "É SUA VEZ!!";
         placarTexto1.setVisible(false);
         placarTexto2.setVisible(true);
         placarTexto2.setText(placar);
@@ -253,7 +257,9 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida1 = game.add
               .image(130, 520, "bolverde")
-              .setInteractive();
+              .setInteractive(); 
+            ganhadorwindireito = 1;
+            perdedorlossesquerdo = 1;
             contadordepartida1.setVisible(true);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -270,6 +276,8 @@ cena1.create = function () {
             contadordepartida2 = game.add
               .image(530, 520, "bolverde")
               .setInteractive();
+            ganhadorwinesquerdo = 1;
+            perdedorlossdireito = 1;
             contadordepartida1.setVisible(true);
             contadordepartida2.setVisible(true);
             newgame.setVisible(true);
@@ -285,7 +293,6 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida1.setVisible(true);
             contadordepartida2.setVisible(true);
-
             newgame.setVisible(true);
           }
         },
@@ -316,6 +323,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           newgame.setVisible(true);
           contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
@@ -328,9 +336,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -372,6 +381,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -383,9 +393,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -427,6 +438,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -438,9 +450,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -482,6 +495,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -493,9 +507,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -539,6 +554,8 @@ cena1.create = function () {
             contadordepartida1 = game.add
               .image(130, 520, "bolverde")
               .setInteractive();
+            ganhadorwindireito = 1;
+            perdedorlossesquerdo = 1;
             contadordepartida1.setVisible(true);
             contadordepartida2.setVisible(true);
             newgame.setVisible(true);
@@ -555,6 +572,8 @@ cena1.create = function () {
             contadordepartida2 = game.add
               .image(530, 520, "bolverde")
               .setInteractive();
+            ganhadorwinesquerdo = 1;
+            perdedorlossdireito = 1;
             contadordepartida1.setVisible(true);
             contadordepartida2.setVisible(true);
             newgame.setVisible(true);
@@ -600,6 +619,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -611,9 +631,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -655,6 +676,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -666,9 +688,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -710,6 +733,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -721,9 +745,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -766,6 +791,7 @@ cena1.create = function () {
           contadordepartida1 = game.add
             .image(130, 520, "bolverde")
             .setInteractive();
+          ganhadorwindireito = 1; perdedorlossesquerdo = 1;
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -777,9 +803,10 @@ cena1.create = function () {
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
-          contadordepartida2 = game.add
+           contadordepartida2 = game.add
             .image(530, 520, "bolverde")
             .setInteractive();
+          ganhadorwinesquerdo = 1; perdedorlossdireito = 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(true);
           newgame.setVisible(true);
@@ -903,12 +930,14 @@ cena1.create = function () {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+            ganhadorwindireito = 2; perdedorlossesquerdo = 2;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
             contadorloss = game.add
               .image(570, 520, "bolverme")
               .setInteractive();
+            
             contadorloss.setVisible(true);
             contadorwin.setVisible(true);
             bolicinza.setVisible(false);
@@ -919,6 +948,8 @@ cena1.create = function () {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 2;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -964,6 +995,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -978,6 +1011,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1018,6 +1053,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1032,6 +1069,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1072,6 +1111,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1086,6 +1127,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1126,6 +1169,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1140,6 +1185,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1182,6 +1229,8 @@ cena1.create = function () {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = 2;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -1197,6 +1246,8 @@ cena1.create = function () {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 2;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -1241,6 +1292,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1254,6 +1307,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1294,6 +1349,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1307,6 +1364,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1347,6 +1406,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1360,6 +1421,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1401,6 +1464,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 2;
+          perdedorlossesquerdo = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1414,641 +1479,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-    } else if (contagem === 2) {
-      var carta1fundo = game.add.image(200, 301, carta1.fundo).setInteractive();
-      var habilidade1 = game.add
-        .image(200, 321, carta1.habilidade.imagem)
-        .setInteractive();
-      var simpatia1 = game.add
-        .image(200, 355, carta1.simpatia.imagem)
-        .setInteractive();
-      var conhecimento1 = game.add
-        .image(200, 385, carta1.conhecimento.imagem)
-        .setInteractive();
-      var altura1 = game.add
-        .image(200, 416, carta1.altura.imagem)
-        .setInteractive();
-      var idade1 = game.add
-        .image(200, 445, carta1.idade.imagem)
-        .setInteractive();
-
-      var carta2fundo = game.add.image(600, 300, carta2.fundo).setInteractive();
-      var habilidade2 = game.add
-        .image(600, 325, carta2.habilidade.imagem)
-        .setInteractive();
-      var simpatia2 = game.add
-        .image(600, 355, carta2.simpatia.imagem)
-        .setInteractive();
-      var conhecimento2 = game.add
-        .image(600, 385, carta2.conhecimento.imagem)
-        .setInteractive();
-      var altura2 = game.add
-        .image(600, 415, carta2.altura.imagem)
-        .setInteractive();
-      var idade2 = game.add
-        .image(600, 445, carta2.idade.imagem)
-        .setInteractive();
-      var contadordepartida1 = game.add
-        .image(130, 520, "bolcinza")
-        .setInteractive();
-      var bolicinza = game.add.image(170, 520, "bolcinza").setInteractive();
-      var bolicinza2 = game.add.image(210, 520, "bolcinza").setInteractive();
-      var bolicinza3 = game.add.image(250, 520, "bolcinza").setInteractive();
-      var bolicinza4 = game.add.image(290, 520, "bolcinza").setInteractive();
-      var contadordepartida2 = game.add
-        .image(530, 520, "bolcinza")
-        .setInteractive();
-      var bolicinza5 = game.add.image(570, 520, "bolcinza").setInteractive();
-      var bolicinza6 = game.add.image(610, 520, "bolcinza").setInteractive();
-      var bolicinza7 = game.add.image(650, 520, "bolcinza").setInteractive();
-      var bolicinza8 = game.add.image(690, 520, "bolcinza").setInteractive();
-      var contadorloss;
-      var contadorwin;
-      contadordepartida1.setVisible(false);
-      contadordepartida2.setVisible(false);
-      bolicinza.setVisible(false);
-      bolicinza2.setVisible(false);
-      bolicinza3.setVisible(false);
-      bolicinza4.setVisible(false);
-      bolicinza5.setVisible(false);
-      bolicinza6.setVisible(false);
-      bolicinza7.setVisible(false);
-      bolicinza8.setVisible(false);
-      vencedor.setVisible(false);
-
-      if (Math.round(Math.random()) === 0) {
-        placar = "It's Your turn!!";
-        placarTexto1.setVisible(true);
-        placarTexto1.setText(placar);
-        placarTexto2.setVisible(false);
-        var imagembloqueio = game.add
-          .image(600, 300, "fundograde")
-          .setInteractive();
-      } else {
-        placar = "Its Your Turn!!";
-        placarTexto1.setVisible(false);
-        placarTexto2.setVisible(true);
-        placarTexto2.setText(placar);
-        //imagem de bloqueio
-        var imagembloqueio = game.add
-          .image(200, 300, "fundograde")
-          .setInteractive();
-      }
-
-      habilidade1.on(
-        "pointerdown",
-        function () {
-          carta1fundo.setVisible(true);
-          habilidade1.setVisible(true);
-          simpatia1.setVisible(false);
-          conhecimento1.setVisible(false);
-          altura1.setVisible(false);
-          idade1.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(true);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          newgame.setVisible(true);
-
-          if (carta1.habilidade.valor > carta2.habilidade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta1.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add
-              .image(570, 520, "bolverme")
-              .setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta1.habilidade.valor < carta2.habilidade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add
-              .image(170, 520, "bolverme")
-              .setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-
-            newgame.setVisible(true);
-          }
-        },
-        this
-      );
-
-      simpatia1.on("pointerdown", function () {
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(true);
-        conhecimento1.setVisible(false);
-        altura1.setVisible(false);
-        idade1.setVisible(false);
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(true);
-        conhecimento2.setVisible(false);
-        altura2.setVisible(false);
-        idade2.setVisible(false);
-        imagembloqueio.setVisible(false);
-        newgame.setVisible(true);
-        if (carta1.simpatia.valor > carta2.simpatia.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-          bolicinza.setVisible(false);
-        } else if (carta1.simpatia.valor < carta2.simpatia.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-
-      conhecimento1.on("pointerdown", function () {
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(false);
-        conhecimento1.setVisible(true);
-        altura1.setVisible(false);
-        idade1.setVisible(false);
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(false);
-        conhecimento2.setVisible(true);
-        altura2.setVisible(false);
-        idade2.setVisible(false);
-        imagembloqueio.setVisible(false);
-        if (carta1.conhecimento.valor > carta2.conhecimento.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-          bolicinza.setVisible(false);
-        } else if (carta1.conhecimento.valor < carta2.conhecimento.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-
-      altura1.on("pointerdown", function () {
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(false);
-        conhecimento1.setVisible(false);
-        altura1.setVisible(true);
-        idade1.setVisible(false);
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(false);
-        conhecimento2.setVisible(false);
-        altura2.setVisible(true);
-        idade2.setVisible(false);
-        imagembloqueio.setVisible(false);
-        if (carta1.altura.valor > carta2.altura.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-          bolicinza.setVisible(false);
-        } else if (carta1.altura.valor < carta2.altura.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-
-      idade1.on("pointerdown", function () {
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(false);
-        conhecimento1.setVisible(false);
-        altura1.setVisible(false);
-        idade1.setVisible(true);
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(false);
-        conhecimento2.setVisible(false);
-        altura2.setVisible(false);
-        idade2.setVisible(true);
-        imagembloqueio.setVisible(false);
-        if (carta1.idade.valor > carta2.idade.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-          bolicinza.setVisible(false);
-        } else if (carta1.idade.valor < carta2.idade.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-
-      habilidade2.on(
-        "pointerdown",
-        function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(true);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          carta1fundo.setVisible(true);
-          habilidade1.setVisible(true);
-          simpatia1.setVisible(false);
-          conhecimento1.setVisible(false);
-          altura1.setVisible(false);
-          idade1.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta1.habilidade.valor > carta2.habilidade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta1.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add
-              .image(570, 520, "bolverme")
-              .setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta1.habilidade.valor < carta2.habilidade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add
-              .image(170, 520, "bolverme")
-              .setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-
-            newgame.setVisible(true);
-          }
-        },
-        this
-      );
-
-      simpatia2.on("pointerdown", function () {
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(true);
-        conhecimento2.setVisible(false);
-        altura2.setVisible(false);
-        idade2.setVisible(false);
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(true);
-        conhecimento1.setVisible(false);
-        altura1.setVisible(false);
-        idade1.setVisible(false);
-        imagembloqueio.setVisible(false);
-        if (carta1.simpatia.valor > carta2.simpatia.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else if (carta1.simpatia.valor < carta2.simpatia.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-
-      conhecimento2.on("pointerdown", function () {
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(false);
-        conhecimento2.setVisible(true);
-        altura2.setVisible(false);
-        idade2.setVisible(false);
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(false);
-        conhecimento1.setVisible(true);
-        altura1.setVisible(false);
-        idade1.setVisible(false);
-        imagembloqueio.setVisible(false);
-        if (carta1.conhecimento.valor > carta2.conhecimento.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else if (carta1.conhecimento.valor < carta2.conhecimento.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-
-      altura2.on("pointerdown", function () {
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(false);
-        conhecimento2.setVisible(false);
-        altura2.setVisible(true);
-        idade2.setVisible(false);
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(false);
-        conhecimento1.setVisible(false);
-        altura1.setVisible(true);
-        idade1.setVisible(false);
-        imagembloqueio.setVisible(false);
-        if (carta1.altura.valor > carta2.altura.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else if (carta1.altura.valor < carta2.altura.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida1.setVisible(true);
-          contadordepartida2.setVisible(true);
-
-          newgame.setVisible(true);
-        }
-      });
-
-      idade2.on("pointerdown", function () {
-        carta2fundo.setVisible(true);
-        habilidade2.setVisible(false);
-        simpatia2.setVisible(false);
-        conhecimento2.setVisible(false);
-        altura2.setVisible(false);
-        idade2.setVisible(true);
-        carta1fundo.setVisible(true);
-        habilidade1.setVisible(false);
-        simpatia1.setVisible(false);
-        conhecimento1.setVisible(false);
-        altura1.setVisible(false);
-        idade1.setVisible(true);
-        imagembloqueio.setVisible(false);
-
-        if (carta1.idade.valor > carta2.idade.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          contadordepartida1.setVisible(false);
-          contadordepartida2.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-          contadorwin.setVisible(true);
-        } else if (carta1.idade.valor < carta2.idade.valor) {
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 2;
+          perdedorlossdireito = 2;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2173,6 +1605,7 @@ cena1.create = function () {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+            ganhadorwindireito = 3; perdedorlossesquerdo = 3;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2189,6 +1622,7 @@ cena1.create = function () {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+            ganhadorwinesquerdo = 3; perdedorlossdireito = 3;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2234,6 +1668,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2248,6 +1684,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2288,6 +1726,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2302,6 +1742,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2342,6 +1784,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2356,6 +1800,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2396,6 +1842,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2410,6 +1858,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2452,6 +1902,8 @@ cena1.create = function () {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = 3;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2467,6 +1919,8 @@ cena1.create = function () {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2511,6 +1965,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2524,6 +1980,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2564,6 +2022,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2577,6 +2037,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2617,6 +2079,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2630,6 +2094,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2671,6 +2137,8 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 3;
+          perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2684,6 +2152,8 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 3;
+          perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2702,7 +2172,6 @@ cena1.create = function () {
           newgame.setVisible(true);
         }
       });
-    
     } else if (contagem === 4) {
       var carta1fundo = game.add.image(200, 301, carta1.fundo).setInteractive();
       var habilidade1 = game.add
@@ -2809,6 +2278,7 @@ cena1.create = function () {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+            ganhadorwindireito = 4;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2825,6 +2295,7 @@ cena1.create = function () {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+            ganhadorwinesquerdo = 4;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2870,6 +2341,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2884,6 +2356,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2924,6 +2397,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2938,6 +2412,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2978,6 +2453,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2992,6 +2468,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3032,6 +2509,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3046,6 +2524,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3088,6 +2567,7 @@ cena1.create = function () {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+            ganhadorwindireito = 4;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -3103,6 +2583,7 @@ cena1.create = function () {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+            ganhadorwinesquerdo = 4;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -3147,6 +2628,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3160,6 +2642,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3200,6 +2683,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3213,6 +2697,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3253,6 +2738,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3266,6 +2752,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3307,6 +2794,7 @@ cena1.create = function () {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
+          ganhadorwindireito = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3320,6 +2808,7 @@ cena1.create = function () {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 4;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -3338,7 +2827,7 @@ cena1.create = function () {
           newgame.setVisible(true);
         }
       });
-      } else {
+    } else {
       var carta1fundo = game.add.image(200, 301, carta1.fundo).setInteractive();
       var habilidade1 = game.add
         .image(200, 321, carta1.habilidade.imagem)
@@ -3442,8 +2931,9 @@ cena1.create = function () {
             placarTexto2.setVisible(false);
             vencedor.setVisible(true);
             textven = carta1.name + " GANHOU";
-            vencedor.setText(textven);
+  
             contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+            ganhadorwindireito = 5;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
@@ -3458,8 +2948,8 @@ cena1.create = function () {
             placarTexto2.setVisible(false);
             vencedor.setVisible(true);
             textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+  
+            contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
@@ -3473,7 +2963,7 @@ cena1.create = function () {
             placarTexto2.setVisible(false);
             vencedor.setVisible(true);
             textven = "EMPATE";
-            vencedor.setText(textven);
+  
             contadordepartida1.setVisible(true);
             contadordepartida2.setVisible(true);
 
@@ -3503,8 +2993,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3517,8 +3007,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3530,7 +3020,7 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
@@ -3557,8 +3047,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3571,8 +3061,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3584,7 +3074,7 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
@@ -3611,8 +3101,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3625,8 +3115,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3638,7 +3128,7 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
@@ -3665,8 +3155,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3679,8 +3169,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3692,7 +3182,7 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
@@ -3721,8 +3211,8 @@ cena1.create = function () {
             placarTexto2.setVisible(false);
             vencedor.setVisible(true);
             textven = carta1.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+  
+            contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
@@ -3736,8 +3226,8 @@ cena1.create = function () {
             placarTexto2.setVisible(false);
             vencedor.setVisible(true);
             textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+  
+            contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
@@ -3751,7 +3241,7 @@ cena1.create = function () {
             placarTexto2.setVisible(false);
             vencedor.setVisible(true);
             textven = "EMPATE";
-            vencedor.setText(textven);
+  
             contadordepartida1.setVisible(true);
             contadordepartida2.setVisible(true);
 
@@ -3779,8 +3269,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3792,8 +3282,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3805,7 +3295,7 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
@@ -3832,8 +3322,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3845,8 +3335,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo=5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3858,7 +3348,7 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
@@ -3885,8 +3375,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3898,8 +3388,9 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
+
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3911,7 +3402,7 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
@@ -3939,8 +3430,8 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta1.name + " GANHOU";
-          vencedor.setText(textven);
-          contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+
+          contadorwin = game.add.image(290, 520, "bolverde").setInteractive(); ganhadorwindireito = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3952,8 +3443,9 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = carta2.name + " GANHOU";
-          vencedor.setText(textven);
+
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
+          ganhadorwinesquerdo = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3965,14 +3457,62 @@ cena1.create = function () {
           placarTexto2.setVisible(false);
           vencedor.setVisible(true);
           textven = "EMPATE";
-          vencedor.setText(textven);
+
           contadordepartida1.setVisible(true);
           contadordepartida2.setVisible(true);
 
           newgame.setVisible(false);
         }
       });
-    };
+    }
+    if (ganhadorwindireito => ganhadorwinesquerdo) {
+      var textofinal;
+      var textofinal;
+      var textofinal2;
+      var placartext;
+      var placartext2;
+      textofinal = "PARABÉNS VC GANHOU!"
+      textofinal2 = "VC PERDEU IDIOTA!"
+      placartext = this.add.text(70, 75, textofinal, {
+        fontSize: "32px",
+        fill: "#ffffff",
+      });
+       placartext.setVisible(true);
+      placartext2 = this.add.text(450, 75, textofinal2, {
+        fontSize: "32px",
+        fill: "#ffffff",
+      });
+       placartext2.setVisible(true);
+    }
+    else if (ganhadorwindireito < ganhadorwinesquerdo) {
+      var textofinal;
+      var textofinal;
+      var textofinal2;
+      var placartext;
+      var placartext2;
+       textofinal = "PARABÉNS VC GANHOU!";
+       textofinal2 = "VC PERDEU IDIOTA!";
+       placartext = this.add.text(70, 75, textofinal2, {
+         fontSize: "32px",
+         fill: "#ffffff",
+       });
+      placartext.setVisible(true);
+       placartext2 = this.add.text(450, 75, textofinal, {
+         fontSize: "32px",
+         fill: "#ffffff",
+       });
+       placartext2.setVisible(true);
+    }
+    else {
+      var textofinal;
+      var empate;
+      textofinal = "EMPATE";
+      empate = this.add.text(250, 50, textofinal, {
+        fontSize: "32px",
+        fill: "#ffffff",
+      });
+      empate.setText(textofinal);
+    }
   });
 };
 
