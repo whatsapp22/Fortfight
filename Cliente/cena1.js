@@ -951,7 +951,7 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+            if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
             else { ganhadorwindireito = 1; perdedorlossesquerdo = 1; }
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
@@ -970,7 +970,7 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
+            if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
             else { ganhadorwinesquerdo = 1; perdedorlossdireito = 1; }
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
@@ -1017,8 +1017,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-          else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+          else { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1034,8 +1034,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-          else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+          else { ganhadorwinesquerdo === 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1077,8 +1077,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+            else  { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1094,8 +1094,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-            else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+            else { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1137,8 +1137,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-          else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+          else { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1154,8 +1154,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-            else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+            else { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1197,8 +1197,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+            else { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1214,8 +1214,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-            else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+            else { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1259,7 +1259,7 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-             if (ganhadorwindireito = 1) {
+             if (ganhadorwindireito === 1) {
                ganhadorwindireito = 2;
                perdedorlossesquerdo = +1;
              } else {
@@ -1281,7 +1281,7 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }  
+            if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }  
             else { ganhadorwinesquerdo = 1; perdedorlossdireito = +1; }
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
@@ -1327,8 +1327,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+            else { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1343,8 +1343,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-            else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+            else { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1386,8 +1386,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-          else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+          else { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1402,8 +1402,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-          else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+          else { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1445,8 +1445,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+            else { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1461,8 +1461,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-          else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+          else { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1505,8 +1505,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-          else if (ganhadorwindireito =0) { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
+          else { ganhadorwindireito = 1; perdedorlossesquerdo = + 1; }
           perdedorlossesquerdo  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1521,8 +1521,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; }
-            else if (ganhadorwinesquerdo = 0) { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
+          if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; }
+            else { ganhadorwinesquerdo = 1; perdedorlossdireito = + 1; }
           perdedorlossdireito  =+ 1;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1648,8 +1648,9 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwidireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = 3; }
-            else if(ganhadorwindireito = 2) { ganhadorwindireito = 3; perdedorlossesquerdo = 3;}
+            if ( ganhadorwidireito === 1) { ganhadorwindireito = 2; perdedorlossesquerdo = 3; }
+            else if (ganhadorwindireito === 2) { ganhadorwindireito = 3; perdedorlossesquerdo = 3; }
+            else { ganhadorwindireito = 1}
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -1666,8 +1667,9 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-            else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+            if (ganhadorwinesquerdo === 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
+            else if (ganhadorwinesquerdo === 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3; }
+            else {ganhadorwinesquerdo = 0}
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -1713,9 +1715,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-          else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
-          perdedorlossesquerdo = 3;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1730,8 +1738,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-          else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 3;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
+          } else {
+            ganhadorwinesquerdo = 1;
+          }
           perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1773,9 +1788,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
-          perdedorlossesquerdo = 3;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -1790,8 +1811,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-            else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 3;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
+          } else {
+            ganhadorwinesquerdo = 1;
+          }
           perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1833,8 +1861,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1850,8 +1885,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-          else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 3;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
+          } else {
+            ganhadorwinesquerdo = 1;
+          }
           perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1893,8 +1935,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-          else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1910,8 +1959,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-          else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 3;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
+          } else {
+            ganhadorwinesquerdo = 1;
+          }
           perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -1955,8 +2011,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
+            if (ganhadorwindireito === 1) {
+              ganhadorwindireito = 2;
+              perdedorlossesquerdo = +1;
+            } else if (ganhadorwindireito === 2) {
+              ganhadorwindireito = 3;
+              perdedorlossesquerdo = +1;
+            } else {
+              ganhadorwindireito = 1;
+            }
             perdedorlossesquerdo = 3;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
@@ -1973,8 +2036,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-            else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+            if (ganhadorwinesquerdo === 1) {
+              ganhadorwinesquerdo = 2;
+              perdedorlossdireito = 3;
+            } else if (ganhadorwinesquerdo === 2) {
+              ganhadorwinesquerdo = 3;
+              perdedorlossdireito = 3;
+            } else {
+              ganhadorwinesquerdo = 1;
+            }
             perdedorlossdireito = 3;
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
@@ -2020,9 +2090,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
-          perdedorlossesquerdo = 3;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2036,8 +2112,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-            else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 3;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
+          } else {
+            ganhadorwinesquerdo = 1;
+          }
           perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -2079,8 +2162,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -2095,8 +2185,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-            else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+         if (ganhadorwinesquerdo === 1) {
+           ganhadorwinesquerdo = 2;
+           perdedorlossdireito = 3;
+         } else if (ganhadorwinesquerdo === 2) {
+           ganhadorwinesquerdo = 3;
+           perdedorlossdireito = 3;
+         } else {
+           ganhadorwinesquerdo = 1;
+         }
           perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -2138,8 +2235,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -2154,8 +2258,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-            else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 3;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
+          } else {
+            ganhadorwinesquerdo = 1;
+          }
           perdedorlossdireito = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -2198,8 +2309,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-          if (ganhadorwindireito = 1) { ganhadorwindireito = 2; perdedorlossesquerdo = +1; }
-            else { ganhadorwindireito = + 1; perdedorlossesquerdo = + 1; }
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+            perdedorlossesquerdo = +1;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+            perdedorlossesquerdo = +1;
+          } else {
+            ganhadorwindireito = 1;
+          }
           perdedorlossesquerdo = 3;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
@@ -2214,9 +2332,16 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-          if (ganhadorwinesquerdo = 1) { ganhadorwinesquerdo = 2; perdedorlossdireito = 3; }
-            else if (ganhadorwinesquerdo = 2) { ganhadorwinesquerdo = 3; perdedorlossdireito = 3;}
-          perdedorlossdireito = 3;
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+            perdedorlossdireito = 3;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+            perdedorlossdireito = 3;
+          } else {
+            ganhadorwinesquerdo = 1;
+          }
+          
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2341,7 +2466,10 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            ganhadorwindireito = 4;
+            if (ganhadorwindireito === 1) { ganhadorwindireito = 2 }
+            else if (ganhadorwindireito === 2) { ganhadorwindireito = 3 }
+            else if (ganhadorwindireito === 0) {ganhadorwindireito = 1}
+            else { ganhadorwindireito = 4 }
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2358,7 +2486,10 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            ganhadorwinesquerdo = 4;
+            if (ganhadorwinesquerdo === 1) {ganhadorwinesquerdo = 2}
+            else if (ganhadorwinesquerdo === 2) { ganhadorwinesquerdo = 3}
+            else if (ganhadorwinesquerdo ===0) {ganhadorwinesquerdo = 1}
+            else {ganhadorwinesquerdo = 4;}
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2404,7 +2535,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2419,7 +2558,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 4;
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+          } else if (ganhadorwinesquerdo === 0) {
+            ganhadorwinesquerdo = 1;
+          } else {
+            ganhadorwinesquerdo = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2460,7 +2607,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2475,7 +2630,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 4;
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+          } else if (ganhadorwinesquerdo === 0) {
+            ganhadorwinesquerdo = 1;
+          } else {
+            ganhadorwinesquerdo = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2516,7 +2679,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2531,7 +2702,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 4;
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+          } else if (ganhadorwinesquerdo === 0) {
+            ganhadorwinesquerdo = 1;
+          } else {
+            ganhadorwinesquerdo = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2572,7 +2751,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2587,7 +2774,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 4;
+         if (ganhadorwinesquerdo === 1) {
+           ganhadorwinesquerdo = 2;
+         } else if (ganhadorwinesquerdo === 2) {
+           ganhadorwinesquerdo = 3;
+         } else if (ganhadorwinesquerdo === 0) {
+           ganhadorwinesquerdo = 1;
+         } else {
+           ganhadorwinesquerdo = 4;
+         }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2630,7 +2825,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta1.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            ganhadorwindireito = 4;
+            if (ganhadorwindireito === 1) {
+              ganhadorwindireito = 2;
+            } else if (ganhadorwindireito === 2) {
+              ganhadorwindireito = 3;
+            } else if (ganhadorwindireito === 0) {
+              ganhadorwindireito = 1;
+            } else {
+              ganhadorwindireito = 4;
+            }
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2646,7 +2849,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta2.name + " GANHOU";
             vencedor.setText(textven);
             contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            ganhadorwinesquerdo = 4;
+           if (ganhadorwinesquerdo === 1) {
+             ganhadorwinesquerdo = 2;
+           } else if (ganhadorwinesquerdo === 2) {
+             ganhadorwinesquerdo = 3;
+           } else if (ganhadorwinesquerdo === 0) {
+             ganhadorwinesquerdo = 1;
+           } else {
+             ganhadorwinesquerdo = 4;
+           }
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(true);
@@ -2691,7 +2902,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2705,7 +2924,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 4;
+         if (ganhadorwinesquerdo === 1) {
+           ganhadorwinesquerdo = 2;
+         } else if (ganhadorwinesquerdo === 2) {
+           ganhadorwinesquerdo = 3;
+         } else if (ganhadorwinesquerdo === 0) {
+           ganhadorwinesquerdo = 1;
+         } else {
+           ganhadorwinesquerdo = 4;
+         }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2746,7 +2973,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2760,7 +2995,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 4;
+          if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+          } else if (ganhadorwinesquerdo === 0) {
+            ganhadorwinesquerdo = 1;
+          } else {
+            ganhadorwinesquerdo = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2801,7 +3044,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2815,7 +3066,10 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 4;
+          if (ganhadorwinesquerdo === 1) {ganhadorwinesquerdo = 2}
+            else if (ganhadorwinesquerdo === 2) { ganhadorwinesquerdo = 3}
+            else if (ganhadorwinesquerdo ===0) {ganhadorwinesquerdo = 1}
+            else {ganhadorwinesquerdo = 4;}           
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2857,7 +3111,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta1.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 4;
+          if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else {
+            ganhadorwindireito = 4;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2871,7 +3133,15 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textven = carta2.name + " GANHOU";
           vencedor.setText(textven);
           contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
+        if (ganhadorwinesquerdo === 1) {
+          ganhadorwinesquerdo = 2;
+        } else if (ganhadorwinesquerdo === 2) {
+          ganhadorwinesquerdo = 3;
+        } else if (ganhadorwinesquerdo === 0) {
+          ganhadorwinesquerdo = 1;
+        } else {
           ganhadorwinesquerdo = 4;
+        }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(true);
@@ -2996,7 +3266,12 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textven = carta1.name + " GANHOU";
   
             contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            ganhadorwindireito = 5;
+            if (ganhadorwindireito === 0){ganhadorwindireito = 1}
+            else if (ganhadorwindireito === 1) { ganhadorwindireito = 2 }
+            else if (ganhadorwindireito === 2) { ganhadorwindireito = 3 }
+            else if (ganhadorwindireito === 3) { ganhadorwindireito = 4 }
+            else {ganhadorwindireito = 5}
+            
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
@@ -3034,7 +3309,16 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             vencedor.setVisible(false);
             textven = carta2.name + " GANHOU";
             contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            ganhadorwinesquerdo = 5;
+            if (ganhadorwinesquerdo === 0) {
+              ganhadorwinesquerdo = 1;
+            } else if (ganhadorwinesquerdo === 1) {
+              ganhadorwinesquerdo = 2;
+            } else if (ganhadorwinesquerdo === 2) {
+              ganhadorwinesquerdo = 3;
+            } else if (ganhadorwinesquerdo === 3) {
+              ganhadorwinesquerdo = 4;
+            } else {ganhadorwinesquerdo = 5}
+
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
@@ -3120,7 +3404,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+           if (ganhadorwindireito === 0) {
+             ganhadorwindireito = 1;
+           } else if (ganhadorwindireito === 1) {
+             ganhadorwindireito = 2;
+           } else if (ganhadorwindireito === 2) {
+             ganhadorwindireito = 3;
+           } else if (ganhadorwindireito === 3) {
+             ganhadorwindireito = 4;
+           } else {
+             ganhadorwindireito = 5;
+           }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3156,11 +3450,20 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta2.name + " GANHOU";
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
-          
+          if (ganhadorwinesquerdo === 0) {
+            ganhadorwinesquerdo = 1;
+          } else if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+          } else if (ganhadorwinesquerdo === 3) {
+            ganhadorwinesquerdo = 4;
+          } else {
+            ganhadorwinesquerdo = 5;
+          }
           contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
           contadorwin.setVisible(true);
@@ -3237,7 +3540,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+           if (ganhadorwindireito === 0) {
+             ganhadorwindireito = 1;
+           } else if (ganhadorwindireito === 1) {
+             ganhadorwindireito = 2;
+           } else if (ganhadorwindireito === 2) {
+             ganhadorwindireito = 3;
+           } else if (ganhadorwindireito === 3) {
+             ganhadorwindireito = 4;
+           } else {
+             ganhadorwindireito = 5;
+           }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false); 
@@ -3265,21 +3578,32 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           textofinal = "EMPATE";
           empate.setVisible(true)
           empate.setText(textofinal);
-        }
+        } console.log(ganhadorwindireito);
+        console.log(ganhadorwinesquerdo);
         } else if (carta1.conhecimento.valor < carta2.conhecimento.valor) {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
           vencedor.setVisible(false);
           textven = carta2.name + " GANHOU";
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 5;
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
-         
+         if (ganhadorwinesquerdo === 0) {
+           ganhadorwinesquerdo = 1;
+         } else if (ganhadorwinesquerdo === 1) {
+           ganhadorwinesquerdo = 2;
+         } else if (ganhadorwinesquerdo === 2) {
+           ganhadorwinesquerdo = 3;
+         } else if (ganhadorwinesquerdo === 3) {
+           ganhadorwinesquerdo = 4;
+         } else {
+           ganhadorwinesquerdo = 5;
+         }
           contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
-          contadorwin.setVisible(true); if (ganhadorwindireito > ganhadorwinesquerdo) {
+          contadorwin.setVisible(true);
+          if (ganhadorwindireito > ganhadorwinesquerdo) {
         textofinal = "PARABÉNS VC GANHOU!"
         textofinal2 = "VC PERDEU IDIOTA!"
         placartext.setVisible(true);
@@ -3299,7 +3623,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         textofinal = "EMPATE";
         empate.setVisible(true)
         empate.setText(textofinal);
-      }
+      } console.log(ganhadorwindireito);
+        console.log(ganhadorwinesquerdo);
         } else {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
@@ -3352,7 +3677,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+           if (ganhadorwindireito === 0) {
+             ganhadorwindireito = 1;
+           } else if (ganhadorwindireito === 1) {
+             ganhadorwindireito = 2;
+           } else if (ganhadorwindireito === 2) {
+             ganhadorwindireito = 3;
+           } else if (ganhadorwindireito === 3) {
+             ganhadorwindireito = 4;
+           } else {
+             ganhadorwindireito = 5;
+           }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3392,7 +3727,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
-         
+         if (ganhadorwinesquerdo === 0) {
+           ganhadorwinesquerdo = 1;
+         } else if (ganhadorwinesquerdo === 1) {
+           ganhadorwinesquerdo = 2;
+         } else if (ganhadorwinesquerdo === 2) {
+           ganhadorwinesquerdo = 3;
+         } else if (ganhadorwinesquerdo === 3) {
+           ganhadorwinesquerdo = 4;
+         } else {
+           ganhadorwinesquerdo = 5;
+         }
           contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
           contadorwin.setVisible(true);
@@ -3469,7 +3814,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+          if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 3) {
+            ganhadorwindireito = 4;
+          } else {
+            ganhadorwindireito = 5;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3496,14 +3851,25 @@ placartext2 = this.add.text(450, 75, textofinal2, {
            empate.setVisible(true);
            empate.setText(textofinal);
          }
-
+ console.log(ganhadorwindireito);
+ console.log(ganhadorwinesquerdo);
         } else if (carta1.idade.valor < carta2.idade.valor) {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
           vencedor.setVisible(false);
           textven = carta2.name + " GANHOU";
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 5;
+          if (ganhadorwinesquerdo === 0) {
+            ganhadorwinesquerdo = 1;
+          } else if (ganhadorwinesquerdo === 1) {
+            ganhadorwinesquerdo = 2;
+          } else if (ganhadorwinesquerdo === 2) {
+            ganhadorwinesquerdo = 3;
+          } else if (ganhadorwinesquerdo === 3) {
+            ganhadorwinesquerdo = 4;
+          } else {
+            ganhadorwinesquerdo = 5;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3528,7 +3894,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textofinal = "EMPATE";
             empate.setVisible(true);
             empate.setText(textofinal);
-          }
+          } console.log(ganhadorwindireito);
+          console.log(ganhadorwinesquerdo);
         } else {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
@@ -3581,7 +3948,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             vencedor.setVisible(false);
             textven = carta1.name + " GANHOU";
             contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
+          if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 3) {
+            ganhadorwindireito = 4;
+          } else {
             ganhadorwindireito = 5;
+          }
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
@@ -3618,11 +3995,18 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             vencedor.setVisible(false);
             textven = carta2.name + " GANHOU";
             contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            ganhadorwinesquerdo = 5;
+            if (ganhadorwinesquerdo === 0) {
+              ganhadorwinesquerdo = 1;
+            } else if (ganhadorwinesquerdo === 1) {
+              ganhadorwinesquerdo = 2;
+            } else if (ganhadorwinesquerdo === 2) {
+              ganhadorwinesquerdo = 3;
+            } else if (ganhadorwinesquerdo === 3) {
+              ganhadorwinesquerdo = 4;
+            } else {ganhadorwinesquerdo = 5}
             contadordepartida1.setVisible(false);
             contadordepartida2.setVisible(false);
             newgame.setVisible(false);
-           
             contadorloss = game.add
               .image(290, 520, "bolverme")
               .setInteractive();
@@ -3702,7 +4086,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+          if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 3) {
+            ganhadorwindireito = 4;
+          } else {
+            ganhadorwindireito = 5;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3736,12 +4130,18 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           placarTexto2.setVisible(false);
           vencedor.setVisible(false);
           textven = carta2.name + " GANHOU";
-
-          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); ganhadorwinesquerdo = 5;
+          contadorwin = game.add.image(690, 520, "bolverde").setInteractive(); if (ganhadorwinesquerdo === 0) {
+              ganhadorwinesquerdo = 1;
+            } else if (ganhadorwinesquerdo === 1) {
+              ganhadorwinesquerdo = 2;
+            } else if (ganhadorwinesquerdo === 2) {
+              ganhadorwinesquerdo = 3;
+            } else if (ganhadorwinesquerdo === 3) {
+              ganhadorwinesquerdo = 4;
+            } else {ganhadorwinesquerdo = 5}
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
-          
           contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
           contadorwin.setVisible(true);
@@ -3818,14 +4218,25 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+          if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 3) {
+            ganhadorwindireito = 4;
+          } else {
+            ganhadorwindireito = 5;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
          
           contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
-          contadorwin.setVisible(true); if (ganhadorwindireito > ganhadorwinesquerdo) {
+          contadorwin.setVisible(true);
+          if (ganhadorwindireito > ganhadorwinesquerdo) {
         textofinal = "PARABÉNS VC GANHOU!"
         textofinal2 = "VC PERDEU IDIOTA!"
         placartext.setVisible(true);
@@ -3845,18 +4256,26 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         textofinal = "EMPATE";
         empate.setVisible(true)
         empate.setText(textofinal);
-      }
+      } console.log(ganhadorwindireito);
+        console.log(ganhadorwinesquerdo);
         } else if (carta1.conhecimento.valor < carta2.conhecimento.valor) {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
           vencedor.setVisible(false);
           textven = carta2.name + " GANHOU";
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 5;
+          if (ganhadorwinesquerdo === 0) {
+              ganhadorwinesquerdo = 1
+            } else if (ganhadorwinesquerdo === 1) {
+              ganhadorwinesquerdo = 2
+            } else if (ganhadorwinesquerdo === 2) {
+              ganhadorwinesquerdo = 3
+            } else if (ganhadorwinesquerdo === 3) {
+              ganhadorwinesquerdo = 4
+            } else {ganhadorwinesquerdo = 5}
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
-          
           contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
           contadorwin.setVisible(true);
@@ -3880,7 +4299,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         textofinal = "EMPATE";
         empate.setVisible(true)
         empate.setText(textofinal);
-      }
+      } console.log(ganhadorwindireito);
+        console.log(ganhadorwinesquerdo);
         } else {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
@@ -3933,7 +4353,17 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+          if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 3) {
+            ganhadorwindireito = 4;
+          } else {
+            ganhadorwindireito = 5;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -3968,11 +4398,18 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           vencedor.setVisible(false);
           textven = carta2.name + " GANHOU";
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 5;
+          if (ganhadorwinesquerdo === 0) {
+              ganhadorwinesquerdo = 1;
+            } else if (ganhadorwinesquerdo === 1) {
+              ganhadorwinesquerdo = 2;
+            } else if (ganhadorwinesquerdo === 2) {
+              ganhadorwinesquerdo = 3;
+            } else if (ganhadorwinesquerdo === 3) {
+              ganhadorwinesquerdo = 4;
+            } else {ganhadorwinesquerdo = 5}
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
-          
           contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
           contadorloss.setVisible(true);
           contadorwin.setVisible(true);if (ganhadorwindireito > ganhadorwinesquerdo) {
@@ -4043,14 +4480,23 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         altura1.setVisible(false);
         idade1.setVisible(true);
         imagembloqueio.setVisible(false);
-
         if (carta1.idade.valor > carta2.idade.valor) {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
           vencedor.setVisible(false);
           textven = carta1.name + " GANHOU";
           contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-          ganhadorwindireito = 5;
+          if (ganhadorwindireito === 0) {
+            ganhadorwindireito = 1;
+          } else if (ganhadorwindireito === 1) {
+            ganhadorwindireito = 2;
+          } else if (ganhadorwindireito === 2) {
+            ganhadorwindireito = 3;
+          } else if (ganhadorwindireito === 3) {
+            ganhadorwindireito = 4;
+          } else {
+            ganhadorwindireito = 5;
+          }
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -4076,13 +4522,23 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             empate.setVisible(true);
             empate.setText(textofinal);
           }
+          console.log(ganhadorwindireito);
+          console.log(ganhadorwinesquerdo);
         } else if (carta1.idade.valor < carta2.idade.valor) {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
           vencedor.setVisible(false);
           textven = carta2.name + " GANHOU";
           contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-          ganhadorwinesquerdo = 5;
+          if (ganhadorwinesquerdo === 0) {
+              ganhadorwinesquerdo = 1;
+            } else if (ganhadorwinesquerdo === 1) {
+              ganhadorwinesquerdo = 2;
+            } else if (ganhadorwinesquerdo === 2) {
+              ganhadorwinesquerdo = 3;
+            } else if (ganhadorwinesquerdo === 3) {
+              ganhadorwinesquerdo = 4;
+            } else {ganhadorwinesquerdo = 5}
           contadordepartida1.setVisible(false);
           contadordepartida2.setVisible(false);
           newgame.setVisible(false);
@@ -4107,7 +4563,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             textofinal = "EMPATE";
             empate.setVisible(true);
             empate.setText(textofinal);
-          }
+          } console.log(ganhadorwindireito);
+          console.log(ganhadorwinesquerdo);
         } else {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
@@ -4136,30 +4593,7 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             empate.setText(textofinal);
           }
         }
-      });
-      ;/*if (ganhadorwindireito > ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!"
-        textofinal2 = "VC PERDEU IDIOTA!"
-        placartext.setVisible(true);
-        placartext.setText(textofinal);
-        placartext2.setVisible(true);
-        placartext2.setText(textofinal2);
-      }
-      else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
-        placartext.setVisible(true);
-        placartext.setText(textofinal);
-        placartext2.setVisible(true);
-        placartext2.setText(textofinal2);
-      }
-      else {
-        textofinal = "EMPATE";
-        empate.setVisible(true)
-        empate.setText(textofinal);
-      }*/
-      
-
+      })
     }
       console.log(ganhadorwindireito);
       console.log(ganhadorwinesquerdo);
