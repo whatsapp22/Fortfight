@@ -77,7 +77,7 @@ var cartas = [
 
 // Placar
 var placar;
-var placarTexto1;
+var placarTexto;
 var placarTexto2;
 var imagembloqueio;
 var ganhadora;
@@ -128,25 +128,17 @@ cena1.create = function () {
   this.add.image(400, 300, "fundi");
 
   // Placar
-  placarTexto1 = this.add.text(70, 75, placar, {
+  placarTexto = this.add.text(270, 75, placar, {
     fontSize: "32px",
     fill: "#ffffff",
   });
-  placarTexto2 = this.add.text(450, 75, placar, {
-    fontSize: "32px",
-    fill: "#ffffff",
-  });
-  vencedor = this.add.text(250, 50, textven, {
+  vencedor = this.add.text(260, 50, textven, {
     fontSize: "32px",
     fill: "#ffffff",
   });
   newgame = this.add.image(400, 300, "newgame").setInteractive();
 
-placartext = this.add.text(70, 75, textofinal, {
-    fontSize: "24px",
-    fill: "#ffffff",
-});
-placartext2 = this.add.text(450, 75, textofinal2, {
+placartext = this.add.text(260, 75, textofinal2, {
   fontSize: "24px",
   fill: "#ffffff",
 });
@@ -160,37 +152,37 @@ placartext2 = this.add.text(450, 75, textofinal2, {
 
   newgame.on("pointerdown", function () {
     // Descobrir a primeira carta
-    carta1 = cartas[Math.floor(Math.random() * 2)];
+    carta1 = cartas[Math.floor(Math.random() * 3)];
     console.log(carta1);
-    carta2 = cartas[Math.floor(Math.random() * 2)];
+    carta2 = cartas[Math.floor(Math.random() * 3)];
     console.log(carta2);
     newgame.setVisible(false);
     while (carta1.name === carta2.name) {
-      carta2 = cartas[Math.floor(Math.random() * 2)];
+      carta2 = cartas[Math.floor(Math.random() * 3)];
       console.log(carta2);
     }
     contagem = contagem + 1;
     console.log(contagem);
 
     if (contagem === 1) {
-      var carta1fundo = game.add.image(200, 301, carta1.fundo).setInteractive();
+      var carta1fundo = game.add.image(400, 301, carta1.fundo).setInteractive();
       var habilidade1 = game.add
-        .image(200, 321, carta1.habilidade.imagem)
+        .image(400, 321, carta1.habilidade.imagem)
         .setInteractive();
       var simpatia1 = game.add
-        .image(200, 355, carta1.simpatia.imagem)
+        .image(400, 355, carta1.simpatia.imagem)
         .setInteractive();
       var conhecimento1 = game.add
-        .image(200, 385, carta1.conhecimento.imagem)
+        .image(400, 385, carta1.conhecimento.imagem)
         .setInteractive();
       var altura1 = game.add
-        .image(200, 416, carta1.altura.imagem)
+        .image(400, 416, carta1.altura.imagem)
         .setInteractive();
       var idade1 = game.add
-        .image(200, 445, carta1.idade.imagem)
+        .image(400, 445, carta1.idade.imagem)
         .setInteractive();
 
-      var carta2fundo = game.add.image(600, 300, carta2.fundo).setInteractive();
+      /*var carta2fundo = game.add.image(600, 300, carta2.fundo).setInteractive();
       var habilidade2 = game.add
         .image(600, 325, carta2.habilidade.imagem)
         .setInteractive();
@@ -205,14 +197,14 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         .setInteractive();
       var idade2 = game.add
         .image(600, 445, carta2.idade.imagem)
-        .setInteractive();
+        .setInteractive();*/
       var contadordepartida1 = game.add
-        .image(130, 520, "bolcinza")
+        .image(320, 520, "bolcinza")
         .setInteractive();
-      var bolicinza = game.add.image(170, 520, "bolcinza").setInteractive();
-      var bolicinza2 = game.add.image(210, 520, "bolcinza").setInteractive();
-      var bolicinza3 = game.add.image(250, 520, "bolcinza").setInteractive();
-      var bolicinza4 = game.add.image(290, 520, "bolcinza").setInteractive();
+      var bolicinza = game.add.image(360, 520, "bolcinza").setInteractive();
+      var bolicinza2 = game.add.image(400, 520, "bolcinza").setInteractive();
+      var bolicinza3 = game.add.image(440, 520, "bolcinza").setInteractive();
+      var bolicinza4 = game.add.image(480, 520, "bolcinza").setInteractive();
       var contadordepartida2 = game.add
         .image(530, 520, "bolcinza")
         .setInteractive();
@@ -222,22 +214,21 @@ placartext2 = this.add.text(450, 75, textofinal2, {
       var bolicinza8 = game.add.image(690, 520, "bolcinza").setInteractive();
       var contadorloss;
       contadordepartida1.setVisible(true);
-      contadordepartida2.setVisible(true);
+      contadordepartida2.setVisible(false);
       bolicinza.setVisible(true);
       bolicinza2.setVisible(true);
       bolicinza3.setVisible(true);
       bolicinza4.setVisible(true);
-      bolicinza5.setVisible(true);
-      bolicinza6.setVisible(true);
-      bolicinza7.setVisible(true);
-      bolicinza8.setVisible(true);
+      bolicinza5.setVisible(false);
+      bolicinza6.setVisible(false);
+      bolicinza7.setVisible(false);
+      bolicinza8.setVisible(false);
       vencedor.setVisible(false);
 
-      if (Math.round(Math.random()) === 0) {
+     /* if (Math.round(Math.random()) === 0) {
         placar = "É SUA VEZ!!";
-        placarTexto1.setVisible(true);
-        placarTexto1.setText(placar);
-        placarTexto2.setVisible(false);
+        placarTexto.setVisible(true);
+        placarTexto.setText(placar);
         var imagembloqueio = game.add
           .image(600, 300, "fundograde")
           .setInteractive();
@@ -250,11 +241,13 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         var imagembloqueio = game.add
           .image(200, 300, "fundograde")
           .setInteractive();
-      }
+      }*/
 
       habilidade1.on(
         "pointerdown",
         function () {
+          WebSocket.emit("escolha", { item: "habilidade", valor: 100 })
+          
           carta1fundo.setVisible(true);
           habilidade1.setVisible(true);
           simpatia1.setVisible(false);
@@ -4038,8 +4031,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             placarTexto2.setVisible(false);
             vencedor.setVisible(false);
             textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
+            contadordepartida1.setVisible(false);
+            contadordepartida2.setVisible(false);
             newgame.setVisible(false);
             if (ganhadorwindireito > ganhadorwinesquerdo) {
         textofinal = "PARABÉNS VC GANHOU!"
