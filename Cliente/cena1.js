@@ -25,29 +25,30 @@ var cartas = [
       imagem: "assets/idadelincoln.png",
     },
   },
-  /*{
-    fundo: "assets/cartferrari.png",
+  {
+    name: "MAYARA",
+    fundo: "assets/Mayara.png",
     habilidade: {
-      valor: "50",
-      imagem: "assets/habilidadeferrari.png",
+      valor: "70",
+      imagem: "assets/habilidademayara.png",
     },
     conhecimento: {
-      valor: "99",
-      imagem: "assets/conhecimentoferrari.png",
+      valor: "80",
+      imagem: "assets/conhecimentomayara.png",
     },
     simpatia: {
-      valor: "81",
-      imagem: "assets/simpatiaferrari.png",
+      valor: "92",
+      imagem: "assets/simpatiamayara.png",
     },
     altura: {
-      valor: "150",
-      imagem: "assets/alturaferrari.png",
+      valor: "155",
+      imagem: "assets/alturamayara.png",
     },
     idade: {
-      valor: "15",
-      imagem: "assets/idadeferrari.png",
+      valor: "35",
+      imagem: "assets/idademayara.png",
     },
-  },*/
+  },
   {
     name: "LULSONARO",
     fundo: "assets/fundolulsonaro.png",
@@ -3291,8 +3292,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           placartext2.setText(textofinal2);
         }
         else if (ganhadorwindireito < ganhadorwinesquerdo) {
-          textofinal = "PARABÉNS VC GANHOU!";
-          textofinal2 = "VC PERDEU IDIOTA!";
+          textofinal = "VC PERDEU IDIOTA!";
+          textofinal2 = "PARABÉNS VC GANHOU!";
           placartext.setVisible(true);
           placartext.setText(textofinal);
           placartext2.setVisible(true);
@@ -3337,8 +3338,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           placartext2.setText(textofinal2);
         }
         else if (ganhadorwindireito < ganhadorwinesquerdo) {
-          textofinal = "PARABÉNS VC GANHOU!";
-          textofinal2 = "VC PERDEU IDIOTA!";
+          textofinal = "VC PERDEUU!";
+          textofinal2 = "VC GANHOU";
           placartext.setVisible(true);
           placartext.setText(textofinal);
           placartext2.setVisible(true);
@@ -3366,8 +3367,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3432,8 +3433,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           placartext2.setText(textofinal2);
         }
         else if (ganhadorwindireito < ganhadorwinesquerdo) {
-          textofinal = "PARABÉNS VC GANHOU!";
-          textofinal2 = "VC PERDEU IDIOTA!";
+          textofinal = "VC PERDEUU!";
+          textofinal2 = "VC GANHOU";
           placartext.setVisible(true);
           placartext.setText(textofinal);
           placartext2.setVisible(true);
@@ -3476,8 +3477,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3505,8 +3506,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3567,8 +3568,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           placartext2.setText(textofinal2);
         }
         else if (ganhadorwindireito < ganhadorwinesquerdo) {
-          textofinal = "PARABÉNS VC GANHOU!";
-          textofinal2 = "VC PERDEU IDIOTA!";
+          textofinal = "VC PERDEUU!";
+          textofinal2 = "VC GANHOU";
           placartext.setVisible(true);
           placartext.setText(textofinal);
           placartext2.setVisible(true);
@@ -3612,8 +3613,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3642,8 +3643,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3705,8 +3706,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3750,8 +3751,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3779,8 +3780,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -3840,8 +3841,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
            placartext2.setVisible(true);
            placartext2.setText(textofinal2);
          } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-           textofinal = "PARABÉNS VC GANHOU!";
-           textofinal2 = "VC PERDEU IDIOTA!";
+           textofinal = "VC PERDEUU!";
+           textofinal2 = "VC GANHOU!";
            placartext.setVisible(true);
            placartext.setText(textofinal);
            placartext2.setVisible(true);
@@ -3851,8 +3852,7 @@ placartext2 = this.add.text(450, 75, textofinal2, {
            empate.setVisible(true);
            empate.setText(textofinal);
          }
- console.log(ganhadorwindireito);
- console.log(ganhadorwinesquerdo);
+
         } else if (carta1.idade.valor < carta2.idade.valor) {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
@@ -3884,8 +3884,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             placartext2.setVisible(true);
             placartext2.setText(textofinal2);
           } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-            textofinal = "PARABÉNS VC GANHOU!";
-            textofinal2 = "VC PERDEU IDIOTA!";
+            textofinal = "VC PERDEUU!";
+            textofinal2 = "VC GANHOUU!";
             placartext.setVisible(true);
             placartext.setText(textofinal);
             placartext2.setVisible(true);
@@ -3912,8 +3912,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             placartext2.setVisible(true);
             placartext2.setText(textofinal2);
           } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-            textofinal = "PARABÉNS VC GANHOU!";
-            textofinal2 = "VC PERDEU IDIOTA!";
+            textofinal = "VC PERDEUUU!";
+            textofinal2 = "VC GANHOUUU!";
             placartext.setVisible(true);
             placartext.setText(textofinal);
             placartext2.setVisible(true);
@@ -3977,8 +3977,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4021,8 +4021,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4050,8 +4050,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4113,8 +4113,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
           placartext2.setText(textofinal2);
         }
         else if (ganhadorwindireito < ganhadorwinesquerdo) {
-          textofinal = "PARABÉNS VC GANHOU!";
-          textofinal2 = "VC PERDEU IDIOTA!";
+          textofinal = "VC PERDEUU!";
+          textofinal2 = "VC GANHOU";
           placartext.setVisible(true);
           placartext.setText(textofinal);
           placartext2.setVisible(true);
@@ -4154,8 +4154,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4183,8 +4183,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4245,8 +4245,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4288,8 +4288,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4318,8 +4318,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4380,8 +4380,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4421,8 +4421,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4450,8 +4450,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
         placartext2.setText(textofinal2);
       }
       else if (ganhadorwindireito < ganhadorwinesquerdo) {
-        textofinal = "PARABÉNS VC GANHOU!";
-        textofinal2 = "VC PERDEU IDIOTA!";
+        textofinal = "VC PERDEU!";
+        textofinal2 = "VC GANHOUUUU!";
         placartext.setVisible(true);
         placartext.setText(textofinal);
         placartext2.setVisible(true);
@@ -4511,8 +4511,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             placartext2.setVisible(true);
             placartext2.setText(textofinal2);
           } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-            textofinal = "PARABÉNS VC GANHOU!";
-            textofinal2 = "VC PERDEU IDIOTA!";
+            textofinal = "VC PERDEUUUU!";
+            textofinal2 = "VC GANHOUUU!";
             placartext.setVisible(true);
             placartext.setText(textofinal);
             placartext2.setVisible(true);
@@ -4522,8 +4522,6 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             empate.setVisible(true);
             empate.setText(textofinal);
           }
-          console.log(ganhadorwindireito);
-          console.log(ganhadorwinesquerdo);
         } else if (carta1.idade.valor < carta2.idade.valor) {
           placarTexto1.setVisible(false);
           placarTexto2.setVisible(false);
@@ -4553,8 +4551,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             placartext2.setVisible(true);
             placartext2.setText(textofinal2);
           } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-            textofinal = "PARABÉNS VC GANHOU!";
-            textofinal2 = "VC PERDEU IDIOTA!";
+            textofinal = "VC PERDEU!";
+            textofinal2 = "VC GANHOU!";
             placartext.setVisible(true);
             placartext.setText(textofinal);
             placartext2.setVisible(true);
@@ -4581,8 +4579,8 @@ placartext2 = this.add.text(450, 75, textofinal2, {
             placartext2.setVisible(true);
             placartext2.setText(textofinal2);
           } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-            textofinal = "PARABÉNS VC GANHOU!";
-            textofinal2 = "VC PERDEU IDIOTA!";
+            textofinal = "VC PERDEUUU!";
+            textofinal2 = "VC GANHOUUU!";
             placartext.setVisible(true);
             placartext.setText(textofinal);
             placartext2.setVisible(true);
