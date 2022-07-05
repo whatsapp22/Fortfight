@@ -440,55 +440,57 @@ cena1.create = function () {
 
       socket.on("decisao", (decisao) => {
         if (jogador === 1) {
-          if (decisao.valor === "primeiro") {
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            placarTexto.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            ganhadorwinesquerdo = +1;
-            contadordepartida = game.add
-              .image(320, 520, "bolverde")
-              .setInteractive();
-            contadordepartida.setVisible(true);
-            // imagembloqueio.setVisible(false);
-            newgame.setVisible(true);
-          } else if (decisao.valor === "segundo") {
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            placarTexto.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " PERDEU";
-            vencedor.setText(textven);
-            ganhadorwindireito = +1;
-            contadordepartida.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add
-              .image(320, 520, "bolverme")
-              .setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            placarTexto.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida.setVisible(true);
-            newgame.setVisible(true);
+          if (decisao.item === "habilidade") {
+            if (decisao.valor === "primeiro") {
+              cartafundo.setVisible(true);
+              habilidade.setVisible(true);
+              simpatia.setVisible(false);
+              conhecimento.setVisible(false);
+              altura.setVisible(false);
+              idade.setVisible(false);
+              placarTexto.setVisible(false);
+              vencedor.setVisible(true);
+              textven = carta.name + " GANHOU";
+              vencedor.setText(textven);
+              ganhadorwinesquerdo = +1;
+              contadordepartida = game.add
+                .image(320, 520, "bolverde")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              // imagembloqueio.setVisible(false);
+              newgame.setVisible(true);
+            } else if (decisao.valor === "segundo") {
+              cartafundo.setVisible(true);
+              habilidade.setVisible(true);
+              simpatia.setVisible(false);
+              conhecimento.setVisible(false);
+              altura.setVisible(false);
+              idade.setVisible(false);
+              placarTexto.setVisible(false);
+              vencedor.setVisible(true);
+              textven = carta.name + " PERDEU";
+              vencedor.setText(textven);
+              ganhadorwindireito = +1;
+              contadordepartida.setVisible(false);
+              newgame.setVisible(true);
+              contadorloss = game.add
+                .image(320, 520, "bolverme")
+                .setInteractive();
+              contadorloss.setVisible(true);
+            } else {
+              cartafundo.setVisible(true);
+              habilidade.setVisible(true);
+              simpatia.setVisible(false);
+              conhecimento.setVisible(false);
+              altura.setVisible(false);
+              idade.setVisible(false);
+              placarTexto.setVisible(false);
+              vencedor.setVisible(true);
+              textven = "EMPATE";
+              vencedor.setText(textven);
+              contadordepartida.setVisible(true);
+              newgame.setVisible(true);
+            }
           }
         }
       });
@@ -528,53 +530,55 @@ cena1.create = function () {
 
     socket.on("decisao", (decisao) => {
       if (jogador === 1) {
-        if (decisao.valor === "primeiro") {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          placarTexto.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta.name + " GANHOU";
-          vencedor.setText(textven);
-          ganhadorwinesquerdo = +1;
-          contadordepartida = game.add
-            .image(320, 520, "bolverde")
-            .setInteractive();
-          contadordepartida.setVisible(true);
-          // imagembloqueio.setVisible(false);
-          newgame.setVisible(true);
-        } else if (decisao.valor === "segundo") {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          placarTexto.setVisible(false);
-          vencedor.setVisible(true);
-          textven = carta.name + " PERDEU";
-          vencedor.setText(textven);
-          ganhadorwindireito = +1;
-          contadordepartida.setVisible(false);
-          newgame.setVisible(true);
-          contadorloss = game.add.image(320, 520, "bolverme").setInteractive();
-          contadorloss.setVisible(true);
-        } else {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          placarTexto.setVisible(false);
-          vencedor.setVisible(true);
-          textven = "EMPATE";
-          vencedor.setText(textven);
-          contadordepartida.setVisible(true);
-          newgame.setVisible(true);
+        if (decisao.item === 'simpatia') {
+          if (decisao.valor === "primeiro") {
+            cartafundo.setVisible(true);
+            habilidade.setVisible(false);
+            simpatia.setVisible(true);
+            conhecimento.setVisible(false);
+            altura.setVisible(false);
+            idade.setVisible(false);
+            placarTexto.setVisible(false);
+            vencedor.setVisible(true);
+            textven = carta.name + " GANHOU";
+            vencedor.setText(textven);
+            ganhadorwinesquerdo = +1;
+            contadordepartida = game.add
+              .image(320, 520, "bolverde")
+              .setInteractive();
+            contadordepartida.setVisible(true);
+            // imagembloqueio.setVisible(false);
+            newgame.setVisible(true);
+          } else if (decisao.valor === "segundo") {
+            cartafundo.setVisible(true);
+            habilidade.setVisible(false);
+            simpatia.setVisible(true);
+            conhecimento.setVisible(false);
+            altura.setVisible(false);
+            idade.setVisible(false);
+            placarTexto.setVisible(false);
+            vencedor.setVisible(true);
+            textven = carta.name + " PERDEU";
+            vencedor.setText(textven);
+            ganhadorwindireito = +1;
+            contadordepartida.setVisible(false);
+            newgame.setVisible(true);
+            contadorloss = game.add.image(320, 520, "bolverme").setInteractive();
+            contadorloss.setVisible(true);
+          } else {
+            cartafundo.setVisible(true);
+            habilidade.setVisible(false);
+            simpatia.setVisible(true);
+            conhecimento.setVisible(false);
+            altura.setVisible(false);
+            idade.setVisible(false);
+            placarTexto.setVisible(false);
+            vencedor.setVisible(true);
+            textven = "EMPATE";
+            vencedor.setText(textven);
+            contadordepartida.setVisible(true);
+            newgame.setVisible(true);
+          }
         }
       }
       });
