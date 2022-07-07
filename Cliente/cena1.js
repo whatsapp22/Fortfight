@@ -122,7 +122,8 @@ var cartas = [
     },
   },
 ];
-
+bolinhasjogador1 = [0, 0, 0, 0, 0];
+bolinhasjogador2 = [0, 0, 0, 0, 0];
 // Placar
 var placar;
 var placarTexto;
