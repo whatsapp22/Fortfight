@@ -22,6 +22,11 @@ io.on("connection", (socket) => {
   io.emit("jogadores", jogadores);
   console.log("+Lista de jogadores: %s", jogadores);
 
+  // Sorteio de uma carta
+  socket.on("carta-escolhida", (carta) => {
+    socket.broadcast.emit("carta-escolhida", carta);
+  });
+
   // Escolha de um item da carta
   socket.on("escolha", (escolha) => {
     socket.broadcast.emit("escolha", escolha);
