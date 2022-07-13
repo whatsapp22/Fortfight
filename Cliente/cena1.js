@@ -405,7 +405,7 @@ cena1.create = function () {
               .setInteractive();
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            //imagembloqueio.setVisible(false);
+            imagembloqueio.setVisible(false);
             socket.emit("decisao", {
               item: "habilidade",
               valor: "segundo",
@@ -3824,8 +3824,7 @@ cena1.create = function () {
                 .image(440, 520, "bolverde")
                 .setInteractive();
               bolicinza3.setVisible(true);
-            }
-            else if (contage === "onelossonewinoneloss") {
+            } else if (contage === "onelossonewinoneloss") {
               ganhador2 = "onewinonelossonewinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverde")
@@ -3873,7 +3872,7 @@ cena1.create = function () {
                 .setInteractive();
               bolicinza3.setVisible(true);
             } else if (contage === "onelosstwowin") {
-              ganhador2 = "onewintreloss";
+              ganhador2 = "onewintreeloss";
               contadorloss = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -3969,43 +3968,120 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " PERDEU";
             vencedor.setText(textven);
-            if (contage === "oneloss2") {
-              ganhador1 = "onelosstwowin";
+            if (contage === "onelosstwowin") {
+              ganhador1 = "onewintwolossonewin";
               contadorloss = game.add
-                .image(360, 520, "bolverme")
+                .image(360, 520, "bolverde")
                 .setInteractive();
               contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador1 = "treelossonewin";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twolossonewin") {
+              ganhador1 = "twowinonelossonewin";
+              contadordepartida2 = game.add
+                .image(320, 520, "bolverme")
+                .setInteractive();
+              contadordepartida2.setVisible(true);
+              bolicinza = game.add.image(360, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador1 = "onelossonewinonelossonewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador1 = "fourwin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador1 = "onelosstreewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador1 = "treewin";
-              contadorloss = game.add
-                .image(360, 520, "bolverme")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
-              contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverme")
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador1 = "twolosstwowin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverde")
                 .setInteractive();
-            } else if (contage === "doiswin1") {
-              ganhador1 = "twolossonewin";
-              contadordepartida2 = game.add
-                .image(320, 520, "bolverde")
-                .setInteractive();
-              contadordepartida2.setVisible(true);
-              bolicinza = game.add.image(360, 520, "bolverde").setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "oneloss1") {
-              ganhador1 = "onewinonelossonewin";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador1 = "onewinonelosstwowin";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -4014,6 +4090,10 @@ cena1.create = function () {
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza2 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
@@ -4030,10 +4110,42 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
-            if (contage === "oneloss1") {
-              ganhador2 = "";
+            if (contage === "twolossonewin") {
+              ganhador2 = "twowintwoloss";
               contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador2 = "onewinonelossonewinoneloss";
+              contadorloss = game.add
                 .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador2 = "treewinoneloss";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
                 .setInteractive();
               contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
@@ -4042,22 +4154,57 @@ cena1.create = function () {
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            }
-            if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
-              contadordepartida = game.add
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador2 = "twolossonewinoneloss";
+              contadorloss = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
-              contadordepartida.setVisible(true);
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelosstwowin") {
+              ganhador2 = "onewintreeloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverde")
                 .setInteractive();
-              bolicinza2.setVisible(true);
-            }
-            if (contage === "oneloss2") {
-              ganhador2 = "onelossonewinoneloss";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador2 = "fourloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador2 = "onelossonewintwoloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
@@ -4067,30 +4214,25 @@ cena1.create = function () {
               bolicinza2 = game.add
                 .image(400, 520, "bolverde")
                 .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin1") {
-              ganhador2 = "treeloss";
-              contadordepartida = game.add
-                .image(360, 520, "bolverde")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
                 .setInteractive();
-              contadordepartida.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverde")
-                .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador2 = "twowinoneloss";
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador2 = "onelosstwowinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
               contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
-                .image(400, 520, "bolverde")
+                .image(400, 520, "bolverme")
                 .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
             socket.emit("decisao", {
@@ -4129,43 +4271,120 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " PERDEU";
             vencedor.setText(textven);
-            if (contage === "oneloss2") {
-              ganhador1 = "onelosstwowin";
+            if (contage === "onelosstwowin") {
+              ganhador1 = "onewintwolossonewin";
               contadorloss = game.add
-                .image(360, 520, "bolverme")
+                .image(360, 520, "bolverde")
                 .setInteractive();
               contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador1 = "treelossonewin";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twolossonewin") {
+              ganhador1 = "twowinonelossonewin";
+              contadordepartida2 = game.add
+                .image(320, 520, "bolverme")
+                .setInteractive();
+              contadordepartida2.setVisible(true);
+              bolicinza = game.add.image(360, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador1 = "onelossonewinonelossonewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador1 = "fourwin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador1 = "onelosstreewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador1 = "treewin";
-              contadorloss = game.add
-                .image(360, 520, "bolverme")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
-              contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverme")
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador1 = "twolosstwowin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverde")
                 .setInteractive();
-            } else if (contage === "doiswin1") {
-              ganhador1 = "twolossonewin";
-              contadordepartida2 = game.add
-                .image(320, 520, "bolverde")
-                .setInteractive();
-              contadordepartida2.setVisible(true);
-              bolicinza = game.add.image(360, 520, "bolverde").setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "oneloss1") {
-              ganhador1 = "onewinonelossonewin";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador1 = "onewinonelosstwowin";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -4174,6 +4393,10 @@ cena1.create = function () {
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza2 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
@@ -4192,10 +4415,10 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
-            if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+            if (contage === "twolossonewin") {
+              ganhador2 = "twowintwoloss";
               contadordepartida = game.add
-                .image(360, 520, "bolverde")
+                .image(360, 520, "bolverme")
                 .setInteractive();
               contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
@@ -4204,9 +4427,89 @@ cena1.create = function () {
                 .image(400, 520, "bolverde")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            }
-            if (contage === "oneloss2") {
-              ganhador2 = "onelossonewinoneloss";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador2 = "onewinonelossonewinoneloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador2 = "treewinoneloss";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador2 = "twolossonewinoneloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelosstwowin") {
+              ganhador2 = "onewintreeloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador2 = "fourloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador2 = "onelossonewintwoloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
@@ -4216,30 +4519,25 @@ cena1.create = function () {
               bolicinza2 = game.add
                 .image(400, 520, "bolverde")
                 .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin1") {
-              ganhador2 = "treeloss";
-              contadordepartida = game.add
-                .image(360, 520, "bolverde")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
                 .setInteractive();
-              contadordepartida.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverde")
-                .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador2 = "twowinoneloss";
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador2 = "onelosstwowinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
               contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
-                .image(400, 520, "bolverde")
+                .image(400, 520, "bolverme")
                 .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
 
@@ -4277,43 +4575,120 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " PERDEU";
             vencedor.setText(textven);
-            if (contage === "oneloss2") {
-              ganhador1 = "onelosstwowin";
+            if (contage === "onelosstwowin") {
+              ganhador1 = "onewintwolossonewin";
               contadorloss = game.add
-                .image(360, 520, "bolverme")
+                .image(360, 520, "bolverde")
                 .setInteractive();
               contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador1 = "treelossonewin";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twolossonewin") {
+              ganhador1 = "twowinonelossonewin";
+              contadordepartida2 = game.add
+                .image(320, 520, "bolverme")
+                .setInteractive();
+              contadordepartida2.setVisible(true);
+              bolicinza = game.add.image(360, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador1 = "onelossonewinonelossonewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador1 = "fourwin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador1 = "onelosstreewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador1 = "treewin";
-              contadorloss = game.add
-                .image(360, 520, "bolverme")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
-              contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverme")
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador1 = "twolosstwowin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverde")
                 .setInteractive();
-            } else if (contage === "doiswin1") {
-              ganhador1 = "twolossonewin";
-              contadordepartida2 = game.add
-                .image(320, 520, "bolverde")
-                .setInteractive();
-              contadordepartida2.setVisible(true);
-              bolicinza = game.add.image(360, 520, "bolverde").setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "oneloss1") {
-              ganhador1 = "onewinonelossonewin";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador1 = "onewinonelosstwowin";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -4322,6 +4697,10 @@ cena1.create = function () {
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza2 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
@@ -4338,10 +4717,10 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
-            if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+            if (contage === "twolossonewin") {
+              ganhador2 = "twowintwoloss";
               contadordepartida = game.add
-                .image(360, 520, "bolverde")
+                .image(360, 520, "bolverme")
                 .setInteractive();
               contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
@@ -4350,9 +4729,89 @@ cena1.create = function () {
                 .image(400, 520, "bolverde")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            }
-            if (contage === "oneloss2") {
-              ganhador2 = "onelossonewinoneloss";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador2 = "onewinonelossonewinoneloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador2 = "treewinoneloss";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador2 = "twolossonewinoneloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelosstwowin") {
+              ganhador2 = "onewintreeloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador2 = "fourloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador2 = "onelossonewintwoloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
@@ -4362,30 +4821,25 @@ cena1.create = function () {
               bolicinza2 = game.add
                 .image(400, 520, "bolverde")
                 .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin1") {
-              ganhador2 = "treeloss";
-              contadordepartida = game.add
-                .image(360, 520, "bolverde")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
                 .setInteractive();
-              contadordepartida.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverde")
-                .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador2 = "twowinoneloss";
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador2 = "onelosstwowinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
               contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
-                .image(400, 520, "bolverde")
+                .image(400, 520, "bolverme")
                 .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
             socket.emit("decisao", {
@@ -4422,43 +4876,120 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " PERDEU";
             vencedor.setText(textven);
-            if (contage === "oneloss2") {
-              ganhador1 = "onelosstwowin";
+            if (contage === "onelosstwowin") {
+              ganhador1 = "onewintwolossonewin";
               contadorloss = game.add
-                .image(360, 520, "bolverme")
+                .image(360, 520, "bolverde")
                 .setInteractive();
               contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador1 = "treelossonewin";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twolossonewin") {
+              ganhador1 = "twowinonelossonewin";
+              contadordepartida2 = game.add
+                .image(320, 520, "bolverme")
+                .setInteractive();
+              contadordepartida2.setVisible(true);
+              bolicinza = game.add.image(360, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador1 = "onelossonewinonelossonewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador1 = "fourwin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador1 = "onelosstreewin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador1 = "treewin";
-              contadorloss = game.add
-                .image(360, 520, "bolverme")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
-              contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverme")
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador1 = "twolosstwowin";
+              contadordepartida = game.add
+                .image(360, 520, "bolverde")
                 .setInteractive();
-            } else if (contage === "doiswin1") {
-              ganhador1 = "twolossonewin";
-              contadordepartida2 = game.add
-                .image(320, 520, "bolverde")
-                .setInteractive();
-              contadordepartida2.setVisible(true);
-              bolicinza = game.add.image(360, 520, "bolverde").setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            } else if (contage === "oneloss1") {
-              ganhador1 = "onewinonelossonewin";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverme")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador1 = "onewinonelosstwowin";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -4467,6 +4998,10 @@ cena1.create = function () {
               bolicinza.setVisible(true);
               bolicinza2 = game.add
                 .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza2 = game.add
+                .image(440, 520, "bolverme")
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
@@ -4483,10 +5018,10 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
-            if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+            if (contage === "twolossonewin") {
+              ganhador2 = "twowintwoloss";
               contadordepartida = game.add
-                .image(360, 520, "bolverde")
+                .image(360, 520, "bolverme")
                 .setInteractive();
               contadordepartida.setVisible(true);
               bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
@@ -4495,9 +5030,89 @@ cena1.create = function () {
                 .image(400, 520, "bolverde")
                 .setInteractive();
               bolicinza2.setVisible(true);
-            }
-            if (contage === "oneloss2") {
-              ganhador2 = "onelossonewinoneloss";
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelossonewinoneloss") {
+              ganhador2 = "onewinonelossonewinoneloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treeloss") {
+              ganhador2 = "treewinoneloss";
+              contadordepartida = game.add
+                .image(360, 520, "bolverme")
+                .setInteractive();
+              contadordepartida.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza2.setVisible(true);
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "twowinoneloss") {
+              ganhador2 = "twolossonewinoneloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverme")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onelosstwowin") {
+              ganhador2 = "onewintreeloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "treewin") {
+              ganhador2 = "fourloss";
+              contadorloss = game.add
+                .image(360, 520, "bolverde")
+                .setInteractive();
+              contadorloss.setVisible(true);
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
+              bolicinza.setVisible(true);
+              bolicinza2 = game.add
+                .image(400, 520, "bolverde")
+                .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewinonelossonewin") {
+              ganhador2 = "onelossonewintwoloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
@@ -4507,30 +5122,25 @@ cena1.create = function () {
               bolicinza2 = game.add
                 .image(400, 520, "bolverde")
                 .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin1") {
-              ganhador2 = "treeloss";
-              contadordepartida = game.add
-                .image(360, 520, "bolverde")
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
                 .setInteractive();
-              contadordepartida.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverde")
-                .setInteractive();
-              bolicinza2.setVisible(true);
-            } else if (contage === "doiswin2") {
-              ganhador2 = "twowinoneloss";
+              bolicinza3.setVisible(true);
+            } else if (contage === "onewintwoloss") {
+              ganhador2 = "onelosstwowinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
                 .setInteractive();
               contadorloss.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
+              bolicinza = game.add.image(320, 520, "bolverde").setInteractive();
               bolicinza.setVisible(true);
               bolicinza2 = game.add
-                .image(400, 520, "bolverde")
+                .image(400, 520, "bolverme")
                 .setInteractive();
+              bolicinza3 = game.add
+                .image(440, 520, "bolverde")
+                .setInteractive();
+              bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
             socket.emit("decisao", {
@@ -4737,7 +5347,7 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               } else if (decisao.ganhador === "twowintwoloss") {
@@ -4754,7 +5364,7 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               } else if (decisao.ganhador === "onewintreeloss") {
@@ -4771,7 +5381,7 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               } else if (decisao.ganhador === "treewinoneloss") {
@@ -4788,16 +5398,16 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               } else if (decisao.ganhador === "onewinonelossonewinoneloss") {
                 contadorloss = game.add
-                  .image(360, 520, "bolverde")
+                  .image(360, 520, "bolverme")
                   .setInteractive();
                 contadorloss.setVisible(true);
                 bolicinza = game.add
-                  .image(320, 520, "bolverme")
+                  .image(320, 520, "bolverde")
                   .setInteractive();
                 bolicinza.setVisible(true);
                 bolicinza2 = game.add
@@ -4805,7 +5415,7 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               } else if (decisao.ganhador === "twolossonewinoneloss") {
@@ -4822,7 +5432,7 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               } else if (decisao.ganhador === "onelosstwowinoneloss") {
@@ -4839,7 +5449,7 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               } else if (decisao.ganhador === "onelossonewintwoloss") {
@@ -4856,7 +5466,7 @@ cena1.create = function () {
                   .setInteractive();
                 bolicinza2.setVisible(true);
                 bolicinza3 = game.add
-                  .image(400, 520, "bolverme")
+                  .image(440, 520, "bolverme")
                   .setInteractive();
                 bolicinza3.setVisible(true);
               }
@@ -4889,7 +5499,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = carta.name + " GANHOU";
               vencedor.setText(textven);
-              if (decisao.ganhador === "treewin") {
+              if (decisao.ganhador === "fourwin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -4902,7 +5512,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "twolossonewin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twolosstwowin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -4915,7 +5529,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onelosstwowin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelosstreewin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -4928,7 +5546,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onewinonelossonewin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewinonelosstwowin") {
                 contadordepartida2 = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -4941,6 +5563,78 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "treelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewintwolossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twowinonelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelossonewinonelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
               }
               imagembloqueio.setVisible(false);
               newgame.setVisible(true);
@@ -4956,7 +5650,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = carta.name + " PERDEU";
               vencedor.setText(textven);
-              if (decisao.ganhador === "treeloss") {
+              if (decisao.ganhador === "fourloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -4969,7 +5663,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "twowinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twowintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -4982,20 +5680,96 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onewintwoloss") {
-                bolicinza = game.add
-                  .image(320, 520, "bolverde")
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
                   .setInteractive();
-                bolicinza.setVisible(true);
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewintreeloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
                 contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
                 bolicinza2 = game.add
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onelossonewinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "treewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewinonelossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twolossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelosstwowinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelossonewintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5008,6 +5782,10 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
               }
               newgame.setVisible(true);
             } else {
@@ -5037,7 +5815,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = carta.name + " GANHOU";
               vencedor.setText(textven);
-              if (decisao.ganhador === "treewin") {
+              if (decisao.ganhador === "fourwin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5050,7 +5828,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "twolossonewin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twolosstwowin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5063,7 +5845,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onelosstwowin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelosstreewin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5076,7 +5862,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onewinonelossonewin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewinonelosstwowin") {
                 contadordepartida2 = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5089,6 +5879,78 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "treelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewintwolossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twowinonelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelossonewinonelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
               }
               imagembloqueio.setVisible(false);
               newgame.setVisible(true);
@@ -5104,7 +5966,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = carta.name + " PERDEU";
               vencedor.setText(textven);
-              if (decisao.ganhador === "treeloss") {
+              if (decisao.ganhador === "fourloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5117,7 +5979,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "twowinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twowintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5130,7 +5996,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onewintwoloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewintreeloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5143,7 +6013,79 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onelossonewinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "treewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewinonelossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twolossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelosstwowinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelossonewintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5156,6 +6098,10 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
               }
 
               newgame.setVisible(true);
@@ -5335,7 +6281,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = carta.name + " PERDEU";
               vencedor.setText(textven);
-              if (decisao.ganhador === "treeloss") {
+              if (decisao.ganhador === "fourloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5348,7 +6294,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "twowinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twowintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5361,7 +6311,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onewintwoloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewintreeloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5374,7 +6328,79 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onelossonewinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "treewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewinonelossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twolossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelosstwowinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelossonewintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5387,6 +6413,10 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
               }
               newgame.setVisible(true);
             } else {
@@ -5415,7 +6445,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = carta.name + " GANHOU";
               vencedor.setText(textven);
-              if (decisao.ganhador === "treewin") {
+              if (decisao.ganhador === "fourwin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5428,7 +6458,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "twolossonewin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twolosstwowin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5441,7 +6475,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onelosstwowin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelosstreewin") {
                 contadordepartida = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5454,7 +6492,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onewinonelossonewin") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewinonelosstwowin") {
                 contadordepartida2 = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5467,6 +6509,78 @@ cena1.create = function () {
                   .image(400, 520, "bolverde")
                   .setInteractive();
                 bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "treelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewintwolossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twowinonelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelossonewinonelossonewin") {
+                contadordepartida2 = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadordepartida2.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverme")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverde")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
               }
               imagembloqueio.setVisible(false);
               newgame.setVisible(true);
@@ -5481,7 +6595,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = carta.name + " PERDEU";
               vencedor.setText(textven);
-              if (decisao.ganhador === "treeloss") {
+              if (decisao.ganhador === "fourloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5494,7 +6608,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "twowinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twowintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5507,7 +6625,11 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onewintwoloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewintreeloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverme")
                   .setInteractive();
@@ -5520,7 +6642,79 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
-              } else if (decisao.ganhador === "onelossonewinoneloss") {
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "treewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onewinonelossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverde")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "twolossonewinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverme")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelosstwowinoneloss") {
+                contadorloss = game.add
+                  .image(360, 520, "bolverde")
+                  .setInteractive();
+                contadorloss.setVisible(true);
+                bolicinza = game.add
+                  .image(320, 520, "bolverme")
+                  .setInteractive();
+                bolicinza.setVisible(true);
+                bolicinza2 = game.add
+                  .image(400, 520, "bolverde")
+                  .setInteractive();
+                bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
+              } else if (decisao.ganhador === "onelossonewintwoloss") {
                 contadorloss = game.add
                   .image(360, 520, "bolverde")
                   .setInteractive();
@@ -5533,6 +6727,10 @@ cena1.create = function () {
                   .image(400, 520, "bolverme")
                   .setInteractive();
                 bolicinza2.setVisible(true);
+                bolicinza3 = game.add
+                  .image(440, 520, "bolverme")
+                  .setInteractive();
+                bolicinza3.setVisible(true);
               }
               newgame.setVisible(true);
             } else {
@@ -5557,4383 +6755,6 @@ cena1.create = function () {
   });
 };
 
-/*
-        simpatia.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          newgame.setVisible(true);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            newgame.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(130, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(130, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          imagembloqueio.setVisible(false);
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(130, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        habilidade2.on(
-          "pointerdown",
-          function () {
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            imagembloqueio.setVisible(false);
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta.name + " GANHOU";
-              vencedor.setText(textven);
-              contadordepartida1 = game.add
-                .image(130, 520, "bolverde")
-                .setInteractive();
-              
-              perdedorlossesquerdo = +1;
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(530, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta2.name + " GANHOU";
-              vencedor.setText(textven);
-              contadordepartida2 = game.add
-                .image(530, 520, "bolverde")
-                .setInteractive();
-              
-              perdedorlossdireito = +1;
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(130, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = "EMPATE";
-              vencedor.setText(textven);
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-  
-              newgame.setVisible(true);
-            }
-          },
-          this
-        );
-  
-        simpatia2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(130, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(130, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(130, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          imagembloqueio.setVisible(false);
-  
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida1 = game.add
-              .image(130, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(530, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadordepartida2 = game.add
-              .image(530, 520, "bolverde")
-              .setInteractive();
-            
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(130, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-      } else if (contagem === 2) {
-        cartafundo = game.add.image(200, 301, carta.fundo).setInteractive();
-        var habilidade = game.add
-          .image(200, 321, carta.habilidade.imagem)
-          .setInteractive();
-        var simpatia = game.add
-          .image(200, 355, carta.simpatia.imagem)
-          .setInteractive();
-        var conhecimento = game.add
-          .image(200, 385, carta.conhecimento.imagem)
-          .setInteractive();
-        var altura = game.add
-          .image(200, 416, carta.altura.imagem)
-          .setInteractive();
-        var idade = game.add
-          .image(200, 445, carta.idade.imagem)
-          .setInteractive();
-  
-        var carta2fundo = game.add.image(600, 300, carta2.fundo).setInteractive();
-        var habilidade2 = game.add
-          .image(600, 325, carta2.habilidade.imagem)
-          .setInteractive();
-        var simpatia2 = game.add
-          .image(600, 355, carta2.simpatia.imagem)
-          .setInteractive();
-        var conhecimento2 = game.add
-          .image(600, 385, carta2.conhecimento.imagem)
-          .setInteractive();
-        var altura2 = game.add
-          .image(600, 415, carta2.altura.imagem)
-          .setInteractive();
-        var idade2 = game.add
-          .image(600, 445, carta2.idade.imagem)
-          .setInteractive();
-        var contadordepartida1 = game.add
-          .image(130, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza = game.add.image(170, 520, "bolcinza").setInteractive();
-        var bolicinza2 = game.add.image(210, 520, "bolcinza").setInteractive();
-        var bolicinza3 = game.add.image(250, 520, "bolcinza").setInteractive();
-        var bolicinza4 = game.add.image(290, 520, "bolcinza").setInteractive();
-        var contadordepartida2 = game.add
-          .image(530, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza5 = game.add.image(570, 520, "bolcinza").setInteractive();
-        var bolicinza6 = game.add.image(610, 520, "bolcinza").setInteractive();
-        var bolicinza7 = game.add.image(650, 520, "bolcinza").setInteractive();
-        var bolicinza8 = game.add.image(690, 520, "bolcinza").setInteractive();
-        var contadorloss;
-        var contadorwin;
-        contadordepartida1.setVisible(false);
-        contadordepartida2.setVisible(false);
-        bolicinza.setVisible(false);
-        bolicinza2.setVisible(false);
-        bolicinza3.setVisible(false);
-        bolicinza4.setVisible(false);
-        bolicinza5.setVisible(false);
-        bolicinza6.setVisible(false);
-        bolicinza7.setVisible(false);
-        bolicinza8.setVisible(false);
-        vencedor.setVisible(false);
-  
-        if (Math.round(Math.random()) === 0) {
-          placar = "É SUA VEZ!";
-          placarTexto1.setVisible(true);
-          placarTexto1.setText(placar);
-          placarTexto2.setVisible(false);
-          var imagembloqueio = game.add
-            .image(600, 300, "fundograde")
-            .setInteractive();
-        } else {
-          placar = "Its Your Turn!!";
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(true);
-          placarTexto2.setText(placar);
-          //imagem de bloqueio
-          var imagembloqueio = game.add
-            .image(200, 300, "fundograde")
-            .setInteractive();
-        }
-  
-        habilidade.on(
-          "pointerdown",
-          function () {
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            imagembloqueio.setVisible(false);
-            newgame.setVisible(true);
-  
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-              if (ganhadorwindireito === 1) {
-                ganhadorwindireito = 2;
-                perdedorlossesquerdo = +1;
-              } else {
-                ganhadorwindireito = 1;
-                perdedorlossesquerdo = 1;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(570, 520, "bolverme")
-                .setInteractive();
-  
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-              bolicinza.setVisible(false);
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta2.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-              } else {
-                ganhadorwinesquerdo = 1;
-                perdedorlossdireito = 1;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(170, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = "EMPATE";
-              vencedor.setText(textven);
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-  
-              newgame.setVisible(true);
-            }
-          },
-          this
-        );
-  
-        simpatia.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          newgame.setVisible(true);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo === 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo = 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo = 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          imagembloqueio.setVisible(false);
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo = 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        habilidade2.on(
-          "pointerdown",
-          function () {
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            imagembloqueio.setVisible(false);
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-              if (ganhadorwindireito === 1) {
-                ganhadorwindireito = 2;
-                perdedorlossesquerdo = +1;
-              } else {
-                ganhadorwindireito = 1;
-                perdedorlossesquerdo = +1;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(570, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta2.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-              } else {
-                ganhadorwinesquerdo = 1;
-                perdedorlossdireito = +1;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(170, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = "EMPATE";
-              vencedor.setText(textven);
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-  
-              newgame.setVisible(true);
-            }
-          },
-          this
-        );
-  
-        simpatia2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo = 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo = 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo = 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          imagembloqueio.setVisible(false);
-  
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(170, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-              perdedorlossesquerdo = +1;
-            }
-            perdedorlossesquerdo = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(570, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(570, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else {
-              ganhadorwinesquerdo = 1;
-              perdedorlossdireito = +1;
-            }
-            perdedorlossdireito = +1;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(170, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-      } else if (contagem === 3) {
-        cartafundo = game.add.image(200, 301, carta.fundo).setInteractive();
-        var habilidade = game.add
-          .image(200, 321, carta.habilidade.imagem)
-          .setInteractive();
-        var simpatia = game.add
-          .image(200, 355, carta.simpatia.imagem)
-          .setInteractive();
-        var conhecimento = game.add
-          .image(200, 385, carta.conhecimento.imagem)
-          .setInteractive();
-        var altura = game.add
-          .image(200, 416, carta.altura.imagem)
-          .setInteractive();
-        var idade = game.add
-          .image(200, 445, carta.idade.imagem)
-          .setInteractive();
-  
-        var carta2fundo = game.add.image(600, 300, carta2.fundo).setInteractive();
-        var habilidade2 = game.add
-          .image(600, 325, carta2.habilidade.imagem)
-          .setInteractive();
-        var simpatia2 = game.add
-          .image(600, 355, carta2.simpatia.imagem)
-          .setInteractive();
-        var conhecimento2 = game.add
-          .image(600, 385, carta2.conhecimento.imagem)
-          .setInteractive();
-        var altura2 = game.add
-          .image(600, 415, carta2.altura.imagem)
-          .setInteractive();
-        var idade2 = game.add
-          .image(600, 445, carta2.idade.imagem)
-          .setInteractive();
-        var contadordepartida1 = game.add
-          .image(130, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza = game.add.image(170, 520, "bolcinza").setInteractive();
-        var bolicinza2 = game.add.image(210, 520, "bolcinza").setInteractive();
-        var bolicinza3 = game.add.image(250, 520, "bolcinza").setInteractive();
-        var bolicinza4 = game.add.image(290, 520, "bolcinza").setInteractive();
-        var contadordepartida2 = game.add
-          .image(530, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza5 = game.add.image(570, 520, "bolcinza").setInteractive();
-        var bolicinza6 = game.add.image(610, 520, "bolcinza").setInteractive();
-        var bolicinza7 = game.add.image(650, 520, "bolcinza").setInteractive();
-        var bolicinza8 = game.add.image(690, 520, "bolcinza").setInteractive();
-        var contadorloss;
-        var contadorwin;
-        contadordepartida1.setVisible(false);
-        contadordepartida2.setVisible(false);
-        bolicinza.setVisible(false);
-        bolicinza2.setVisible(false);
-        bolicinza3.setVisible(false);
-        bolicinza4.setVisible(false);
-        bolicinza5.setVisible(false);
-        bolicinza6.setVisible(false);
-        bolicinza7.setVisible(false);
-        bolicinza8.setVisible(false);
-        vencedor.setVisible(false);
-  
-        if (Math.round(Math.random()) === 0) {
-          placar = "É SUA VEZ!";
-          placarTexto1.setVisible(true);
-          placarTexto1.setText(placar);
-          placarTexto2.setVisible(false);
-          var imagembloqueio = game.add
-            .image(600, 300, "fundograde")
-            .setInteractive();
-        } else {
-          placar = "Its Your Turn!!";
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(true);
-          placarTexto2.setText(placar);
-          //imagem de bloqueio
-          var imagembloqueio = game.add
-            .image(200, 300, "fundograde")
-            .setInteractive();
-        }
-  
-        habilidade.on(
-          "pointerdown",
-          function () {
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            imagembloqueio.setVisible(false);
-            newgame.setVisible(true);
-  
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-              if (ganhadorwidireito === 1) {
-                ganhadorwindireito = 2;
-                perdedorlossesquerdo = 3;
-              } else if (ganhadorwindireito === 2) {
-                ganhadorwindireito = 3;
-                perdedorlossesquerdo = 3;
-              } else {
-                ganhadorwindireito = 1;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(610, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-              bolicinza.setVisible(false);
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta2.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-                perdedorlossdireito = 3;
-              } else if (ganhadorwinesquerdo === 2) {
-                ganhadorwinesquerdo = 3;
-                perdedorlossdireito = 3;
-              } else {
-                ganhadorwinesquerdo = 0;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(210, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = "EMPATE";
-              vencedor.setText(textven);
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-  
-              newgame.setVisible(true);
-            }
-          },
-          this
-        );
-  
-        simpatia.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          newgame.setVisible(true);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-            perdedorlossdireito = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-            perdedorlossdireito = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            perdedorlossesquerdo = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-            perdedorlossdireito = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          imagembloqueio.setVisible(false);
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            perdedorlossesquerdo = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-            perdedorlossdireito = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        habilidade2.on(
-          "pointerdown",
-          function () {
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            imagembloqueio.setVisible(false);
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-              if (ganhadorwindireito === 1) {
-                ganhadorwindireito = 2;
-                perdedorlossesquerdo = +1;
-              } else if (ganhadorwindireito === 2) {
-                ganhadorwindireito = 3;
-                perdedorlossesquerdo = +1;
-              } else {
-                ganhadorwindireito = 1;
-              }
-              perdedorlossesquerdo = 3;
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(610, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta2.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-                perdedorlossdireito = 3;
-              } else if (ganhadorwinesquerdo === 2) {
-                ganhadorwinesquerdo = 3;
-                perdedorlossdireito = 3;
-              } else {
-                ganhadorwinesquerdo = 1;
-              }
-              perdedorlossdireito = 3;
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(210, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = "EMPATE";
-              vencedor.setText(textven);
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-  
-              newgame.setVisible(true);
-            }
-          },
-          this
-        );
-  
-        simpatia2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-            perdedorlossdireito = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            perdedorlossesquerdo = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-            perdedorlossdireito = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            perdedorlossesquerdo = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-            perdedorlossdireito = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          imagembloqueio.setVisible(false);
-  
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(210, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-              perdedorlossesquerdo = +1;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-              perdedorlossesquerdo = +1;
-            } else {
-              ganhadorwindireito = 1;
-            }
-            perdedorlossesquerdo = 3;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(610, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(610, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-              perdedorlossdireito = 3;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-              perdedorlossdireito = 3;
-            } else {
-              ganhadorwinesquerdo = 1;
-            }
-  
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(210, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-      } else if (contagem === 4) {
-        cartafundo = game.add.image(200, 301, carta.fundo).setInteractive();
-        var habilidade = game.add
-          .image(200, 321, carta.habilidade.imagem)
-          .setInteractive();
-        var simpatia = game.add
-          .image(200, 355, carta.simpatia.imagem)
-          .setInteractive();
-        var conhecimento = game.add
-          .image(200, 385, carta.conhecimento.imagem)
-          .setInteractive();
-        var altura = game.add
-          .image(200, 416, carta.altura.imagem)
-          .setInteractive();
-        var idade = game.add
-          .image(200, 445, carta.idade.imagem)
-          .setInteractive();
-  
-        var carta2fundo = game.add.image(600, 300, carta2.fundo).setInteractive();
-        var habilidade2 = game.add
-          .image(600, 325, carta2.habilidade.imagem)
-          .setInteractive();
-        var simpatia2 = game.add
-          .image(600, 355, carta2.simpatia.imagem)
-          .setInteractive();
-        var conhecimento2 = game.add
-          .image(600, 385, carta2.conhecimento.imagem)
-          .setInteractive();
-        var altura2 = game.add
-          .image(600, 415, carta2.altura.imagem)
-          .setInteractive();
-        var idade2 = game.add
-          .image(600, 445, carta2.idade.imagem)
-          .setInteractive();
-        var contadordepartida1 = game.add
-          .image(130, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza = game.add.image(170, 520, "bolcinza").setInteractive();
-        var bolicinza2 = game.add.image(210, 520, "bolcinza").setInteractive();
-        var bolicinza3 = game.add.image(250, 520, "bolcinza").setInteractive();
-        var bolicinza4 = game.add.image(290, 520, "bolcinza").setInteractive();
-        var contadordepartida2 = game.add
-          .image(530, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza5 = game.add.image(570, 520, "bolcinza").setInteractive();
-        var bolicinza6 = game.add.image(610, 520, "bolcinza").setInteractive();
-        var bolicinza7 = game.add.image(650, 520, "bolcinza").setInteractive();
-        var bolicinza8 = game.add.image(690, 520, "bolcinza").setInteractive();
-        var contadorloss;
-        var contadorwin;
-        contadordepartida1.setVisible(false);
-        contadordepartida2.setVisible(false);
-        bolicinza.setVisible(false);
-        bolicinza2.setVisible(false);
-        bolicinza3.setVisible(false);
-        bolicinza4.setVisible(false);
-        bolicinza5.setVisible(false);
-        bolicinza6.setVisible(false);
-        bolicinza7.setVisible(false);
-        bolicinza8.setVisible(false);
-        vencedor.setVisible(false);
-  
-        if (Math.round(Math.random()) === 0) {
-          placar = "É SUA VEZ!";
-          placarTexto1.setVisible(true);
-          placarTexto1.setText(placar);
-          placarTexto2.setVisible(false);
-          var imagembloqueio = game.add
-            .image(600, 300, "fundograde")
-            .setInteractive();
-        } else {
-          placar = "Its Your Turn!!";
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(true);
-          placarTexto2.setText(placar);
-          //imagem de bloqueio
-          var imagembloqueio = game.add
-            .image(200, 300, "fundograde")
-            .setInteractive();
-        }
-  
-        habilidade.on(
-          "pointerdown",
-          function () {
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            imagembloqueio.setVisible(false);
-            newgame.setVisible(true);
-  
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-              if (ganhadorwindireito === 1) {
-                ganhadorwindireito = 2;
-              } else if (ganhadorwindireito === 2) {
-                ganhadorwindireito = 3;
-              } else if (ganhadorwindireito === 0) {
-                ganhadorwindireito = 1;
-              } else {
-                ganhadorwindireito = 4;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(650, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-              bolicinza.setVisible(false);
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta2.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-              } else if (ganhadorwinesquerdo === 2) {
-                ganhadorwinesquerdo = 3;
-              } else if (ganhadorwinesquerdo === 0) {
-                ganhadorwinesquerdo = 1;
-              } else {
-                ganhadorwinesquerdo = 4;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(250, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = "EMPATE";
-              vencedor.setText(textven);
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-  
-              newgame.setVisible(true);
-            }
-          },
-          this
-        );
-  
-        simpatia.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          newgame.setVisible(true);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          imagembloqueio.setVisible(false);
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        habilidade2.on(
-          "pointerdown",
-          function () {
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            imagembloqueio.setVisible(false);
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-              if (ganhadorwindireito === 1) {
-                ganhadorwindireito = 2;
-              } else if (ganhadorwindireito === 2) {
-                ganhadorwindireito = 3;
-              } else if (ganhadorwindireito === 0) {
-                ganhadorwindireito = 1;
-              } else {
-                ganhadorwindireito = 4;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(650, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = carta2.name + " GANHOU";
-              vencedor.setText(textven);
-              contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-              } else if (ganhadorwinesquerdo === 2) {
-                ganhadorwinesquerdo = 3;
-              } else if (ganhadorwinesquerdo === 0) {
-                ganhadorwinesquerdo = 1;
-              } else {
-                ganhadorwinesquerdo = 4;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(true);
-              contadorloss = game.add
-                .image(250, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(true);
-              textven = "EMPATE";
-              vencedor.setText(textven);
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-  
-              newgame.setVisible(true);
-            }
-          },
-          this
-        );
-  
-        simpatia2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        conhecimento2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        altura2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-  
-        idade2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          imagembloqueio.setVisible(false);
-  
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(250, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else {
-              ganhadorwindireito = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(650, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = carta2.name + " GANHOU";
-            vencedor.setText(textven);
-            contadorwin = game.add.image(650, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else {
-              ganhadorwinesquerdo = 4;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(true);
-            contadorloss = game.add.image(250, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(true);
-            textven = "EMPATE";
-            vencedor.setText(textven);
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-  
-            newgame.setVisible(true);
-          }
-        });
-      } else {
-        cartafundo = game.add.image(200, 301, carta.fundo).setInteractive();
-        var habilidade = game.add
-          .image(200, 321, carta.habilidade.imagem)
-          .setInteractive();
-        var simpatia = game.add
-          .image(200, 355, carta.simpatia.imagem)
-          .setInteractive();
-        var conhecimento = game.add
-          .image(200, 385, carta.conhecimento.imagem)
-          .setInteractive();
-        var altura = game.add
-          .image(200, 416, carta.altura.imagem)
-          .setInteractive();
-        var idade = game.add
-          .image(200, 445, carta.idade.imagem)
-          .setInteractive();
-  
-        var carta2fundo = game.add.image(600, 300, carta2.fundo).setInteractive();
-        var habilidade2 = game.add
-          .image(600, 325, carta2.habilidade.imagem)
-          .setInteractive();
-        var simpatia2 = game.add
-          .image(600, 355, carta2.simpatia.imagem)
-          .setInteractive();
-        var conhecimento2 = game.add
-          .image(600, 385, carta2.conhecimento.imagem)
-          .setInteractive();
-        var altura2 = game.add
-          .image(600, 415, carta2.altura.imagem)
-          .setInteractive();
-        var idade2 = game.add
-          .image(600, 445, carta2.idade.imagem)
-          .setInteractive();
-        var contadordepartida1 = game.add
-          .image(130, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza = game.add.image(170, 520, "bolcinza").setInteractive();
-        var bolicinza2 = game.add.image(210, 520, "bolcinza").setInteractive();
-        var bolicinza3 = game.add.image(250, 520, "bolcinza").setInteractive();
-        var bolicinza4 = game.add.image(290, 520, "bolcinza").setInteractive();
-        var contadordepartida2 = game.add
-          .image(530, 520, "bolcinza")
-          .setInteractive();
-        var bolicinza5 = game.add.image(570, 520, "bolcinza").setInteractive();
-        var bolicinza6 = game.add.image(610, 520, "bolcinza").setInteractive();
-        var bolicinza7 = game.add.image(650, 520, "bolcinza").setInteractive();
-        var bolicinza8 = game.add.image(690, 520, "bolcinza").setInteractive();
-        var contadorloss;
-        var contadorwin;
-        contadordepartida1.setVisible(false);
-        contadordepartida2.setVisible(false);
-        bolicinza.setVisible(false);
-        bolicinza2.setVisible(false);
-        bolicinza3.setVisible(false);
-        bolicinza4.setVisible(false);
-        bolicinza5.setVisible(false);
-        bolicinza6.setVisible(false);
-        bolicinza7.setVisible(false);
-        bolicinza8.setVisible(false);
-        vencedor.setVisible(false);
-  
-        if (Math.round(Math.random()) === 0) {
-          placar = "É SUA VEZ!";
-          placarTexto1.setVisible(true);
-          placarTexto1.setText(placar);
-          placarTexto2.setVisible(false);
-          var imagembloqueio = game.add
-            .image(600, 300, "fundograde")
-            .setInteractive();
-        } else {
-          placar = "Its Your Turn!!";
-          placarTexto1.setVisible(false);
-          placarTexto2.setVisible(true);
-          placarTexto2.setText(placar);
-          //imagem de bloqueio
-          var imagembloqueio = game.add
-            .image(200, 300, "fundograde")
-            .setInteractive();
-        }
-  
-        habilidade.on(
-          "pointerdown",
-          function () {
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            imagembloqueio.setVisible(false);
-            newgame.setVisible(true);
-  
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(false);
-              textven = carta.name + " GANHOU";
-  
-              contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-              if (ganhadorwindireito === 0) {
-                ganhadorwindireito = 1;
-              } else if (ganhadorwindireito === 1) {
-                ganhadorwindireito = 2;
-              } else if (ganhadorwindireito === 2) {
-                ganhadorwindireito = 3;
-              } else if (ganhadorwindireito === 3) {
-                ganhadorwindireito = 4;
-              } else {
-                ganhadorwindireito = 5;
-              }
-  
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(false);
-  
-              contadorloss = game.add
-                .image(690, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-              bolicinza.setVisible(false);
-              if (ganhadorwindireito > ganhadorwinesquerdo) {
-                textofinal = "PARABÉNS VC GANHOU!";
-                textofinal2 = "VC PERDEU IDIOTA!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-                textofinal = "VC PERDEU IDIOTA!";
-                textofinal2 = "PARABÉNS VC GANHOU!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else {
-                textofinal = "EMPATE";
-                empate.setVisible(true);
-                empate.setText(textofinal);
-              }
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(false);
-              textven = carta2.name + " GANHOU";
-              contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 0) {
-                ganhadorwinesquerdo = 1;
-              } else if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-              } else if (ganhadorwinesquerdo === 2) {
-                ganhadorwinesquerdo = 3;
-              } else if (ganhadorwinesquerdo === 3) {
-                ganhadorwinesquerdo = 4;
-              } else {
-                ganhadorwinesquerdo = 5;
-              }
-  
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(false);
-  
-              contadorloss = game.add
-                .image(290, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-              if (ganhadorwindireito > ganhadorwinesquerdo) {
-                textofinal = "PARABÉNS VC GANHOU!";
-                textofinal2 = "VC PERDEU IDIOTA!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-                textofinal = "VC PERDEUU!";
-                textofinal2 = "VC GANHOU";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else {
-                textofinal = "EMPATE";
-                empate.setVisible(true);
-                empate.setText(textofinal);
-              }
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(false);
-              textven = "EMPATE";
-              contadordepartida1.setVisible(true);
-              contadordepartida2.setVisible(true);
-              newgame.setVisible(false);
-              if (ganhadorwindireito > ganhadorwinesquerdo) {
-                textofinal = "PARABÉNS VC GANHOU!";
-                textofinal2 = "VC PERDEU IDIOTA!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-                textofinal = "VC PERDEU!";
-                textofinal2 = "VC GANHOUUUU!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else {
-                textofinal = "EMPATE";
-                empate.setVisible(true);
-                empate.setText(textofinal);
-              }
-            }
-          },
-          this
-        );
-  
-        simpatia.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          newgame.setVisible(true);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-  
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUU!";
-              textofinal2 = "VC GANHOU";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-  
-        conhecimento.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUU!";
-              textofinal2 = "VC GANHOU";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-            console.log(ganhadorwindireito);
-            console.log(ganhadorwinesquerdo);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-            console.log(ganhadorwindireito);
-            console.log(ganhadorwinesquerdo);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-  
-        altura.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-  
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            ganhadorwinesquerdo = 5;
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-  
-        idade.on("pointerdown", function () {
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          imagembloqueio.setVisible(false);
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            bolicinza.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUU!";
-              textofinal2 = "VC GANHOU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUU!";
-              textofinal2 = "VC GANHOUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-            console.log(ganhadorwindireito);
-            console.log(ganhadorwinesquerdo);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUUU!";
-              textofinal2 = "VC GANHOUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-  
-        habilidade2.on(
-          "pointerdown",
-          function () {
-            carta2fundo.setVisible(true);
-            habilidade2.setVisible(true);
-            simpatia2.setVisible(false);
-            conhecimento2.setVisible(false);
-            altura2.setVisible(false);
-            idade2.setVisible(false);
-            cartafundo.setVisible(true);
-            habilidade.setVisible(true);
-            simpatia.setVisible(false);
-            conhecimento.setVisible(false);
-            altura.setVisible(false);
-            idade.setVisible(false);
-            imagembloqueio.setVisible(false);
-            if (carta.habilidade.valor > carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(false);
-              textven = carta.name + " GANHOU";
-              contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-              if (ganhadorwindireito === 0) {
-                ganhadorwindireito = 1;
-              } else if (ganhadorwindireito === 1) {
-                ganhadorwindireito = 2;
-              } else if (ganhadorwindireito === 2) {
-                ganhadorwindireito = 3;
-              } else if (ganhadorwindireito === 3) {
-                ganhadorwindireito = 4;
-              } else {
-                ganhadorwindireito = 5;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(false);
-  
-              contadorloss = game.add
-                .image(690, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-              if (ganhadorwindireito > ganhadorwinesquerdo) {
-                textofinal = "PARABÉNS VC GANHOU!";
-                textofinal2 = "VC PERDEU IDIOTA!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-                textofinal = "VC PERDEU!";
-                textofinal2 = "VC GANHOUUUU!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else {
-                textofinal = "EMPATE";
-                empate.setVisible(true);
-                empate.setText(textofinal);
-              }
-            } else if (carta.habilidade.valor < carta2.habilidade.valor) {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(false);
-              textven = carta2.name + " GANHOU";
-              contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-              if (ganhadorwinesquerdo === 0) {
-                ganhadorwinesquerdo = 1;
-              } else if (ganhadorwinesquerdo === 1) {
-                ganhadorwinesquerdo = 2;
-              } else if (ganhadorwinesquerdo === 2) {
-                ganhadorwinesquerdo = 3;
-              } else if (ganhadorwinesquerdo === 3) {
-                ganhadorwinesquerdo = 4;
-              } else {
-                ganhadorwinesquerdo = 5;
-              }
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(false);
-              contadorloss = game.add
-                .image(290, 520, "bolverme")
-                .setInteractive();
-              contadorloss.setVisible(true);
-              contadorwin.setVisible(true);
-              if (ganhadorwindireito > ganhadorwinesquerdo) {
-                textofinal = "PARABÉNS VC GANHOU!";
-                textofinal2 = "VC PERDEU IDIOTA!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-                textofinal = "VC PERDEU!";
-                textofinal2 = "VC GANHOUUUU!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else {
-                textofinal = "EMPATE";
-                empate.setVisible(true);
-                empate.setText(textofinal);
-              }
-            } else {
-              placarTexto1.setVisible(false);
-              placarTexto2.setVisible(false);
-              vencedor.setVisible(false);
-              textven = "EMPATE";
-              contadordepartida1.setVisible(false);
-              contadordepartida2.setVisible(false);
-              newgame.setVisible(false);
-              if (ganhadorwindireito > ganhadorwinesquerdo) {
-                textofinal = "PARABÉNS VC GANHOU!";
-                textofinal2 = "VC PERDEU IDIOTA!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-                textofinal = "VC PERDEU!";
-                textofinal2 = "VC GANHOUUUU!";
-                placartext.setVisible(true);
-                placartext.setText(textofinal);
-                placartext2.setVisible(true);
-                placartext2.setText(textofinal2);
-              } else {
-                textofinal = "EMPATE";
-                empate.setVisible(true);
-                empate.setText(textofinal);
-              }
-            }
-          },
-          this
-        );
-  
-        simpatia2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(true);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(true);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          if (carta.simpatia.valor > carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-  
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUU!";
-              textofinal2 = "VC GANHOU";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else if (carta.simpatia.valor < carta2.simpatia.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-  
-        conhecimento2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(true);
-          altura2.setVisible(false);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(true);
-          altura.setVisible(false);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.conhecimento.valor > carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-  
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-            console.log(ganhadorwindireito);
-            console.log(ganhadorwinesquerdo);
-          } else if (carta.conhecimento.valor < carta2.conhecimento.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-            console.log(ganhadorwindireito);
-            console.log(ganhadorwinesquerdo);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-  
-        altura2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(true);
-          idade2.setVisible(false);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(true);
-          idade.setVisible(false);
-          imagembloqueio.setVisible(false);
-          if (carta.altura.valor > carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-  
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else if (carta.altura.valor < carta2.altura.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOUUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-  
-        idade2.on("pointerdown", function () {
-          carta2fundo.setVisible(true);
-          habilidade2.setVisible(false);
-          simpatia2.setVisible(false);
-          conhecimento2.setVisible(false);
-          altura2.setVisible(false);
-          idade2.setVisible(true);
-          cartafundo.setVisible(true);
-          habilidade.setVisible(false);
-          simpatia.setVisible(false);
-          conhecimento.setVisible(false);
-          altura.setVisible(false);
-          idade.setVisible(true);
-          imagembloqueio.setVisible(false);
-          if (carta.idade.valor > carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta.name + " GANHOU";
-            contadorwin = game.add.image(290, 520, "bolverde").setInteractive();
-            if (ganhadorwindireito === 0) {
-              ganhadorwindireito = 1;
-            } else if (ganhadorwindireito === 1) {
-              ganhadorwindireito = 2;
-            } else if (ganhadorwindireito === 2) {
-              ganhadorwindireito = 3;
-            } else if (ganhadorwindireito === 3) {
-              ganhadorwindireito = 4;
-            } else {
-              ganhadorwindireito = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(690, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUUUU!";
-              textofinal2 = "VC GANHOUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          } else if (carta.idade.valor < carta2.idade.valor) {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = carta2.name + " GANHOU";
-            contadorwin = game.add.image(690, 520, "bolverde").setInteractive();
-            if (ganhadorwinesquerdo === 0) {
-              ganhadorwinesquerdo = 1;
-            } else if (ganhadorwinesquerdo === 1) {
-              ganhadorwinesquerdo = 2;
-            } else if (ganhadorwinesquerdo === 2) {
-              ganhadorwinesquerdo = 3;
-            } else if (ganhadorwinesquerdo === 3) {
-              ganhadorwinesquerdo = 4;
-            } else {
-              ganhadorwinesquerdo = 5;
-            }
-            contadordepartida1.setVisible(false);
-            contadordepartida2.setVisible(false);
-            newgame.setVisible(false);
-            contadorloss = game.add.image(290, 520, "bolverme").setInteractive();
-            contadorloss.setVisible(true);
-            contadorwin.setVisible(true);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEU!";
-              textofinal2 = "VC GANHOU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-            console.log(ganhadorwindireito);
-            console.log(ganhadorwinesquerdo);
-          } else {
-            placarTexto1.setVisible(false);
-            placarTexto2.setVisible(false);
-            vencedor.setVisible(false);
-            textven = "EMPATE";
-            contadordepartida1.setVisible(true);
-            contadordepartida2.setVisible(true);
-            newgame.setVisible(false);
-            if (ganhadorwindireito > ganhadorwinesquerdo) {
-              textofinal = "PARABÉNS VC GANHOU!";
-              textofinal2 = "VC PERDEU IDIOTA!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else if (ganhadorwindireito < ganhadorwinesquerdo) {
-              textofinal = "VC PERDEUUU!";
-              textofinal2 = "VC GANHOUUU!";
-              placartext.setVisible(true);
-              placartext.setText(textofinal);
-              placartext2.setVisible(true);
-              placartext2.setText(textofinal2);
-            } else {
-              textofinal = "EMPATE";
-              empate.setVisible(true);
-              empate.setText(textofinal);
-            }
-          }
-        });
-        */
 cena1.update = function () {};
 
 export { cena1 };
