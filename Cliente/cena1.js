@@ -167,7 +167,7 @@ var imagembloqueio;
 var carta_escolhida;
 var contage;
 var contadordepartida2;
-var cartafundo
+var cartafundo;
 cena1.preload = function () {
   // Fundo da cena
   this.load.image("fundi", "assets/lua.jpg");
@@ -250,7 +250,7 @@ cena1.create = function () {
     console.log(contagem);
 
     if (contagem === 1) {
-      cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
+      var cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
       var habilidade = game.add
         .image(400, 321, carta.habilidade.imagem)
         .setInteractive();
@@ -975,8 +975,10 @@ cena1.create = function () {
           contage = decisao.ganhador;
         }
       });
-    } else if (contagem === 2) {
-      cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
+      carta_escolhida = undefined
+    }
+    else if (contagem === 2) {
+      var cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
       var habilidade = game.add
         .image(400, 321, carta.habilidade.imagem)
         .setInteractive();
@@ -1922,8 +1924,10 @@ cena1.create = function () {
         }
         contage = decisao.ganhador;
       });
-    } else if (contagem === 3) {
-      cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
+      carta_escolhida = undefined
+    }
+    else if (contagem === 3) {
+      var cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
       var habilidade = game.add
         .image(400, 321, carta.habilidade.imagem)
         .setInteractive();
@@ -2117,7 +2121,7 @@ cena1.create = function () {
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
             if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+              ganhador2 = "onewintwoloss";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -2129,7 +2133,7 @@ cena1.create = function () {
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
-            if (contage === "oneloss2") {
+            else if (contage === "oneloss2") {
               ganhador2 = "onelossonewinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
@@ -2263,20 +2267,7 @@ cena1.create = function () {
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
             if (contage === "oneloss1") {
-              ganhador2 = "";
-              contadordepartida = game.add
-                .image(360, 520, "bolverde")
-                .setInteractive();
-              contadordepartida.setVisible(true);
-              bolicinza = game.add.image(320, 520, "bolverme").setInteractive();
-              bolicinza.setVisible(true);
-              bolicinza2 = game.add
-                .image(400, 520, "bolverme")
-                .setInteractive();
-              bolicinza2.setVisible(true);
-            }
-            if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+              ganhador2 = "onewintwoloss";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -2288,7 +2279,7 @@ cena1.create = function () {
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
-            if (contage === "oneloss2") {
+            else if (contage === "oneloss2") {
               ganhador2 = "onelossonewinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
@@ -2425,7 +2416,7 @@ cena1.create = function () {
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
             if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+              ganhador2 = "onewintwoloss";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -2437,7 +2428,7 @@ cena1.create = function () {
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
-            if (contage === "oneloss2") {
+            else if (contage === "oneloss2") {
               ganhador2 = "onelossonewinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
@@ -2571,7 +2562,7 @@ cena1.create = function () {
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
             if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+              ganhador2 = "onewintwoloss";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -2583,7 +2574,7 @@ cena1.create = function () {
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
-            if (contage === "oneloss2") {
+            else if (contage === "oneloss2") {
               ganhador2 = "onelossonewinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
@@ -2716,7 +2707,7 @@ cena1.create = function () {
             textven = carta.name + " GANHOU";
             vencedor.setText(textven);
             if (contage === "oneloss1") {
-              ganhador2 = "twolossonewin";
+              ganhador2 = "onewintwoloss";
               contadordepartida = game.add
                 .image(360, 520, "bolverde")
                 .setInteractive();
@@ -2728,7 +2719,7 @@ cena1.create = function () {
                 .setInteractive();
               bolicinza2.setVisible(true);
             }
-            if (contage === "oneloss2") {
+            else if (contage === "oneloss2") {
               ganhador2 = "onelossonewinoneloss";
               contadorloss = game.add
                 .image(360, 520, "bolverme")
@@ -3533,8 +3524,10 @@ cena1.create = function () {
         }
         contage = decisao.ganhador;
       });
-    } else if (contagem === 4) {
-      cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
+      carta_escolhida = undefined
+    } 
+    else if (contagem === 4) {
+      var cartafundo = game.add.image(400, 301, carta.fundo).setInteractive();
       var habilidade = game.add
         .image(400, 321, carta.habilidade.imagem)
         .setInteractive();
