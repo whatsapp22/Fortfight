@@ -168,6 +168,25 @@ var carta_escolhida;
 var contage;
 var contadordepartida2;
 var cartafundo;
+
+var ice_servers = {
+  iceServers: [
+    {
+      urls: "stun:ifsc.cloud",
+    },
+    {
+      urls: "turns:ifsc.cloud",
+      username: "etorresini",
+      credential: "matrix",
+    },
+  ],
+};
+var sala
+var localConnection;
+var remoteConnection;
+var midias;
+const audio = document.querySelector("audio");
+
 cena1.preload = function () {
   // Fundo da cena
   this.load.image("fundi", "assets/lua.jpg");
@@ -220,32 +239,99 @@ cena1.create = function () {
   var game = this;
   socket = io();
 
+  socket.on("connect", () => {
+    sala = 1
+    socket.emit("entrar-na-sala", sala);
+  })
+
   socket.on("jogadores", (jogadores) => {
     if (jogadores.primeiro === socket.id) {
       jogador = 1;
+
+      navigator.mediaDevices
+        .getUserMedia({ video: false, audio: true })
+        .then((stream) => {
+          midias = stream;
+        })
+        .catch((error) => console.log(error));
     } else if (jogadores.segundo === socket.id) {
       jogador = 2;
+
+      navigator.mediaDevices
+        .getUserMedia({ video: false, audio: true })
+        .then((stream) => {
+          midias = stream;
+          localConnection = new RTCPeerConnection(ice_servers);
+          midias
+            .getTracks()
+            .forEach((track) => localConnection.addTrack(track, midias));
+          localConnection.onicecandidate = ({ candidate }) => {
+            candidate && socket.emit("candidate", sala, candidate);
+          };
+          console.log(midias);
+          localConnection.ontrack = ({ streams: [midias] }) => {
+            audio.srcObject = midias;
+          };
+          localConnection
+            .createOffer()
+            .then((offer) => localConnection.setLocalDescription(offer))
+            .then(() => {
+              socket.emit("offer", sala, localConnection.localDescription);
+            });
+        })
+        .catch((error) => console.log(error));
     }
     console.log(jogadores);
   });
 
+  socket.on("offer", (socketId, description) => {
+    remoteConnection = new RTCPeerConnection(ice_servers);
+    midias
+      .getTracks()
+      .forEach((track) => remoteConnection.addTrack(track, midias));
+    remoteConnection.onicecandidate = ({ candidate }) => {
+      candidate && socket.emit("candidate", socketId, candidate);
+    };
+    remoteConnection.ontrack = ({ streams: [midias] }) => {
+      audio.srcObject = midias;
+    };
+    remoteConnection
+      .setRemoteDescription(description)
+      .then(() => remoteConnection.createAnswer())
+      .then((answer) => remoteConnection.setLocalDescription(answer))
+      .then(() => {
+        socket.emit("answer", socketId, remoteConnection.localDescription);
+      });
+  });
+
+  socket.on("answer", (description) => {
+    localConnection.setRemoteDescription(description);
+  });
+
+  socket.on("candidate", (candidate) => {
+    const conn = localConnection || remoteConnection;
+    conn.addIceCandidate(new RTCIceCandidate(candidate));
+  });
+
   socket.on("carta-escolhida", (carta) => {
     carta_escolhida = carta.name;
+    console.log("Carta recebida:", carta)
   });
 
   newgame.on("pointerdown", function () {
     // Descobrir a primeira carta
-    carta = cartas[Math.floor(Math.random() * 6)];
+    carta = cartas[Math.floor(Math.random() * cartas.length)];
+    console.log("Primeira carta:", carta, cartas)
     if (carta_escolhida) {
       // oponente já escolheu
       while (carta_escolhida === carta.name) {
-        carta = cartas[Math.floor(Math.random() * 6)];
+        carta = cartas[Math.floor(Math.random() * cartas.length)];
+        console.log("N carta:", carta)
       }
     } else {
       socket.emit("carta-escolhida", carta);
+      console.log("Enviada:", carta)
     }
-
-    console.log(carta);
 
     newgame.setVisible(false);
     contagem = contagem + 1;
@@ -366,7 +452,7 @@ cena1.create = function () {
       });
 
       socket.on("escolha", (escolha) => {
-        console.log(escolha);
+        console.log("Escolha:", escolha);
         if (escolha.item === "habilidade") {
           cartafundo.setVisible(true);
           habilidade.setVisible(true);
@@ -429,7 +515,7 @@ cena1.create = function () {
               ganhador: "nenhum",
             });
           }
-          console.log(carta);
+          //console.log(carta);
         } else if (escolha.item === "simpatia") {
           cartafundo.setVisible(true);
           habilidade.setVisible(false);
@@ -7341,7 +7427,7 @@ cena1.create = function () {
                 .image(480, 520, "bolverde")
                 .setInteractive();
               bolicinza4.setVisible(true);
-            
+
             } else if (contage === "twowinonelossonewin") {
               ganhador2 = "twolossonewintwoloss";
               contadorloss = game.add
@@ -13523,8 +13609,7 @@ cena1.create = function () {
           "onelosstwowinonelossonewin", "onelossonewinonelosstwowin",
           "twolosstreewin", "twolossonewinonelossonewin", "fourlossonewin", "treelosstwowin",
           "onewintreelossonewin", "onewinonelossonewinonelossonewin", "twowintwolossonewin",
-          "onelossonewintwolossonewin", "onewintwolosstwowin")
-        {
+          "onelossonewintwolossonewin", "onewintwolosstwowin") {
           var placara = game.add.image(300, 500, "vitoria").setInteractive()
           placara.setVisible(true);
         }
@@ -13542,6 +13627,6 @@ cena1.create = function () {
   });
 };
 
-cena1.update = function () {};
+cena1.update = function () { };
 
 export { cena1 };
