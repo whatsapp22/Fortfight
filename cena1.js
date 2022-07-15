@@ -600,7 +600,7 @@ cena1.create = function () {
               .setInteractive();
             contadorloss.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "primeiro",
               carta: carta.nome,
@@ -618,7 +618,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "segundo",
               carta: carta.nome,
@@ -632,7 +632,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "empate",
               carta: carta.nome,
@@ -662,7 +662,7 @@ cena1.create = function () {
               .image(320, 520, "bolverme")
               .setInteractive();
             contadorloss.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "altura",
               valor: "primeiro",
               carta: carta.nome,
@@ -680,7 +680,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "altura",
               valor: "segundo",
               carta: carta.nome,
@@ -694,7 +694,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "altura",
               valor: "empate",
               carta: carta.nome,
@@ -724,7 +724,7 @@ cena1.create = function () {
               .setInteractive();
             contadorloss.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "idade",
               valor: "primeiro",
               carta: carta.nome,
@@ -742,7 +742,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "idade",
               valor: "segundo",
               carta: carta.nome,
@@ -756,7 +756,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             imagembloqueio.setVisible(false);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "idade",
               valor: "empate",
               carta: carta.nome,
@@ -1101,7 +1101,7 @@ cena1.create = function () {
       }
 
       habilidade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala, {
           item: "habilidade",
           valor: carta.habilidade.valor,
           cartanome: carta.name,
@@ -1116,7 +1116,7 @@ cena1.create = function () {
         newgame.setVisible(false);
       });
       simpatia.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala, {
           item: "simpatia",
           valor: carta.simpatia.valor,
           cartanome: carta.name,
@@ -1132,7 +1132,7 @@ cena1.create = function () {
       });
 
       conhecimento.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala, {
           item: "conhecimento",
           valor: carta.conhecimento.valor,
           cartanome: carta.name,
@@ -1148,7 +1148,7 @@ cena1.create = function () {
       });
 
       altura.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala, {
           item: "altura",
           valor: carta.altura.valor,
           cartanome: carta.name,
@@ -1164,7 +1164,7 @@ cena1.create = function () {
       });
 
       idade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala, {
           item: "idade",
           valor: carta.idade.valor,
           cartanome: carta.name,
@@ -1216,7 +1216,7 @@ cena1.create = function () {
             contadordepartida.setVisible(false);
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+            socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "primeiro",
               carta: carta.nome,
@@ -1246,7 +1246,7 @@ cena1.create = function () {
               bolicinza.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "segundo",
               carta: carta.nome,
@@ -1300,7 +1300,7 @@ cena1.create = function () {
             }
             contadordepartida.setVisible(false);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "primeiro",
               carta: carta.nome,
@@ -1330,7 +1330,7 @@ cena1.create = function () {
               bolicinza.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "segundo",
               carta: carta.nome,
@@ -1383,7 +1383,7 @@ cena1.create = function () {
             }
             contadordepartida.setVisible(false);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "primeiro",
               carta: carta.nome,
@@ -1412,7 +1412,7 @@ cena1.create = function () {
               bolicinza.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "segundo",
               carta: carta.nome,
@@ -1425,7 +1425,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "empate",
               carta: carta.nome,
@@ -1469,7 +1469,7 @@ cena1.create = function () {
               .image(360, 520, "bolverme")
               .setInteractive();
             contadorloss.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "primeiro",
               carta: carta.nome,
@@ -1498,7 +1498,7 @@ cena1.create = function () {
               bolicinza.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "segundo",
               carta: carta.nome,
@@ -1552,7 +1552,7 @@ cena1.create = function () {
             contadordepartida.setVisible(false);
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "primeiro",
               carta: carta.nome,
@@ -1581,7 +1581,7 @@ cena1.create = function () {
               bolicinza.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "segundo",
               carta: carta.nome,
@@ -2049,7 +2049,7 @@ cena1.create = function () {
       }
 
       habilidade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "habilidade",
           valor: carta.habilidade.valor,
           cartanome: carta.name,
@@ -2064,7 +2064,7 @@ cena1.create = function () {
         newgame.setVisible(false);
       });
       simpatia.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "simpatia",
           valor: carta.simpatia.valor,
           cartanome: carta.name,
@@ -2080,7 +2080,7 @@ cena1.create = function () {
       });
 
       conhecimento.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "conhecimento",
           valor: carta.conhecimento.valor,
           cartanome: carta.name,
@@ -2096,7 +2096,7 @@ cena1.create = function () {
       });
 
       altura.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "altura",
           valor: carta.altura.valor,
           cartanome: carta.name,
@@ -2112,7 +2112,7 @@ cena1.create = function () {
       });
 
       idade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "idade",
           valor: carta.idade.valor,
           cartanome: carta.name,
@@ -2194,7 +2194,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "primeiro",
               carta: carta.nome,
@@ -2255,7 +2255,7 @@ cena1.create = function () {
                 .setInteractive();
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "segundo",
               carta: carta.nome,
@@ -2268,7 +2268,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala,{
               item: "habilidade",
               valor: "empate",
               carta: carta.nome,
@@ -2339,7 +2339,7 @@ cena1.create = function () {
               bolicinza2.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "primeiro",
               carta: carta.nome,
@@ -2400,7 +2400,7 @@ cena1.create = function () {
                 .setInteractive();
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "segundo",
               carta: carta.nome,
@@ -2414,7 +2414,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             bolicinza.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "empate",
               carta: carta.nome,
@@ -2487,7 +2487,7 @@ cena1.create = function () {
 
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "primeiro",
               carta: carta.nome,
@@ -2549,7 +2549,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "segundo",
               carta: carta.nome,
@@ -2562,7 +2562,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao",sala, {
               item: "conhecimento",
               valor: "empate",
               carta: carta.nome,
@@ -2633,7 +2633,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "primeiro",
               carta: carta.nome,
@@ -2693,7 +2693,7 @@ cena1.create = function () {
                 .setInteractive();
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "segundo",
               carta: carta.nome,
@@ -2706,7 +2706,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao",sala, {
               item: "altura",
               valor: "empate",
               carta: carta.nome,
@@ -2777,7 +2777,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "primeiro",
               carta: carta.nome,
@@ -2837,7 +2837,7 @@ cena1.create = function () {
                 .setInteractive();
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "segundo",
               carta: carta.nome,
@@ -2850,7 +2850,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao",sala, {
               item: "idade",
               valor: "empate",
               carta: carta.nome,
@@ -3643,7 +3643,7 @@ cena1.create = function () {
       }
 
       habilidade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "habilidade",
           valor: carta.habilidade.valor,
           cartanome: carta.name,
@@ -3658,7 +3658,7 @@ cena1.create = function () {
         newgame.setVisible(false);
       });
       simpatia.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "simpatia",
           valor: carta.simpatia.valor,
           cartanome: carta.name,
@@ -3674,7 +3674,7 @@ cena1.create = function () {
       });
 
       conhecimento.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "conhecimento",
           valor: carta.conhecimento.valor,
           cartanome: carta.name,
@@ -3690,7 +3690,7 @@ cena1.create = function () {
       });
 
       altura.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala,{
           item: "altura",
           valor: carta.altura.valor,
           cartanome: carta.name,
@@ -3706,7 +3706,7 @@ cena1.create = function () {
       });
 
       idade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "idade",
           valor: carta.idade.valor,
           cartanome: carta.name,
@@ -3869,7 +3869,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "primeiro",
               carta: carta.nome,
@@ -4006,7 +4006,7 @@ cena1.create = function () {
               bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "segundo",
               carta: carta.nome,
@@ -4019,7 +4019,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala,{
               item: "habilidade",
               valor: "empate",
               carta: carta.nome,
@@ -4171,7 +4171,7 @@ cena1.create = function () {
               bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "primeiro",
               carta: carta.nome,
@@ -4308,7 +4308,7 @@ cena1.create = function () {
               bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "segundo",
               carta: carta.nome,
@@ -4322,7 +4322,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             bolicinza.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao",sala, {
               item: "simpatia",
               valor: "empate",
               carta: carta.nome,
@@ -4476,7 +4476,7 @@ cena1.create = function () {
 
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "primeiro",
               carta: carta.nome,
@@ -4614,7 +4614,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "segundo",
               carta: carta.nome,
@@ -4627,7 +4627,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala,{
               item: "conhecimento",
               valor: "empate",
               carta: carta.nome,
@@ -4779,7 +4779,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "primeiro",
               carta: carta.nome,
@@ -4915,7 +4915,7 @@ cena1.create = function () {
               bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "segundo",
               carta: carta.nome,
@@ -4928,7 +4928,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala,{
               item: "altura",
               valor: "empate",
               carta: carta.nome,
@@ -5080,7 +5080,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "primeiro",
               carta: carta.nome,
@@ -5216,7 +5216,7 @@ cena1.create = function () {
               bolicinza3.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "segundo",
               carta: carta.nome,
@@ -5229,7 +5229,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao",sala, {
               item: "idade",
               valor: "empate",
               carta: carta.nome,
@@ -6861,7 +6861,7 @@ cena1.create = function () {
       }
 
       habilidade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "habilidade",
           valor: carta.habilidade.valor,
           cartanome: carta.name,
@@ -6876,7 +6876,7 @@ cena1.create = function () {
         newgame.setVisible(false);
       });
       simpatia.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala,{
           item: "simpatia",
           valor: carta.simpatia.valor,
           cartanome: carta.name,
@@ -6892,7 +6892,7 @@ cena1.create = function () {
       });
 
       conhecimento.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "conhecimento",
           valor: carta.conhecimento.valor,
           cartanome: carta.name,
@@ -6908,7 +6908,7 @@ cena1.create = function () {
       });
 
       altura.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha", sala,{
           item: "altura",
           valor: carta.altura.valor,
           cartanome: carta.name,
@@ -6924,7 +6924,7 @@ cena1.create = function () {
       });
 
       idade.on("pointerdown", function () {
-        socket.emit("escolha", {
+        socket.emit("escolha",sala, {
           item: "idade",
           valor: carta.idade.valor,
           cartanome: carta.name,
@@ -7279,7 +7279,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "primeiro",
               carta: carta.nome,
@@ -7601,7 +7601,7 @@ cena1.create = function () {
               bolicinza4.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "segundo",
               carta: carta.nome,
@@ -7614,7 +7614,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "habilidade",
               valor: "empate",
               carta: carta.nome,
@@ -7945,7 +7945,7 @@ cena1.create = function () {
               bolicinza4.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "simpatia",
               valor: "segundo",
               carta: carta.nome,
@@ -7959,7 +7959,7 @@ cena1.create = function () {
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
             bolicinza.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala,{
               item: "simpatia",
               valor: "empate",
               carta: carta.nome,
@@ -8305,7 +8305,7 @@ cena1.create = function () {
 
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "primeiro",
               carta: carta.nome,
@@ -8627,7 +8627,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "conhecimento",
               valor: "segundo",
               carta: carta.nome,
@@ -8640,7 +8640,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala,{
               item: "conhecimento",
               valor: "empate",
               carta: carta.nome,
@@ -8984,7 +8984,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "primeiro",
               carta: carta.nome,
@@ -9304,7 +9304,7 @@ cena1.create = function () {
               bolicinza4.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "altura",
               valor: "segundo",
               carta: carta.nome,
@@ -9317,7 +9317,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao",sala, {
               item: "altura",
               valor: "empate",
               carta: carta.nome,
@@ -9661,7 +9661,7 @@ cena1.create = function () {
             }
             newgame.setVisible(true);
 
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "primeiro",
               carta: carta.nome,
@@ -9981,7 +9981,7 @@ cena1.create = function () {
               bolicinza4.setVisible(true);
             }
             newgame.setVisible(true);
-            socket.emit("decisao", {
+           socket.emit("decisao", sala, {
               item: "idade",
               valor: "segundo",
               carta: carta.nome,
@@ -9994,7 +9994,7 @@ cena1.create = function () {
             vencedor.setText(textven);
             contadordepartida.setVisible(true);
             newgame.setVisible(true);
-            socket.emit("decisao", {
+            socket.emit("decisao", sala,{
               item: "idade",
               valor: "empate",
               carta: carta.nome,
