@@ -2254,7 +2254,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 2;
             newgame.setVisible(true);
             socket.emit("decisao", sala,{
               item: "habilidade",
@@ -2399,7 +2399,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 2;
             newgame.setVisible(true);
             bolicinza.setVisible(true);
            socket.emit("decisao", sala, {
@@ -2548,7 +2548,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 2;
             newgame.setVisible(true);
             socket.emit("decisao",sala, {
               item: "conhecimento",
@@ -2692,7 +2692,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 2;
             newgame.setVisible(true);
             socket.emit("decisao",sala, {
               item: "altura",
@@ -2836,7 +2836,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 2;
             newgame.setVisible(true);
             socket.emit("decisao",sala, {
               item: "idade",
@@ -2997,7 +2997,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 2;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "simpatia") {
@@ -3145,7 +3145,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 2;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "conhecimento") {
@@ -3294,7 +3294,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+             contagem = 2;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "altura") {
@@ -3440,7 +3440,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 2;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "idade") {
@@ -3586,7 +3586,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 2;
               newgame.setVisible(true);
             }
           }
@@ -4005,7 +4005,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 3;
             newgame.setVisible(true);
             socket.emit("decisao", sala,{
               item: "habilidade",
@@ -4307,7 +4307,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 3;
             newgame.setVisible(true);
             bolicinza.setVisible(true);
             socket.emit("decisao",sala, {
@@ -4613,7 +4613,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 3;
             newgame.setVisible(true);
             socket.emit("decisao", sala,{
               item: "conhecimento",
@@ -4914,7 +4914,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 3;
             newgame.setVisible(true);
             socket.emit("decisao", sala,{
               item: "altura",
@@ -5215,7 +5215,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 3;
             newgame.setVisible(true);
             socket.emit("decisao",sala, {
               item: "idade",
@@ -5544,7 +5544,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 3;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "simpatia") {
@@ -5860,7 +5860,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 3;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "conhecimento") {
@@ -6177,7 +6177,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 3;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "altura") {
@@ -6491,7 +6491,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 3;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "idade") {
@@ -6805,7 +6805,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 3;
               newgame.setVisible(true);
             }
           }
@@ -7594,7 +7594,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 4;
             newgame.setVisible(true);
            socket.emit("decisao", sala, {
               item: "habilidade",
@@ -7935,9 +7935,8 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 4;
             newgame.setVisible(true);
-            bolicinza.setVisible(true);
             socket.emit("decisao", sala,{
               item: "simpatia",
               valor: "empate",
@@ -8611,7 +8610,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 4;
             newgame.setVisible(true);
             socket.emit("decisao", sala,{
               item: "conhecimento",
@@ -9284,7 +9283,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+            contagem = 4;
             newgame.setVisible(true);
             socket.emit("decisao",sala, {
               item: "altura",
@@ -9957,7 +9956,7 @@ cena1.create = function () {
             vencedor.setVisible(true);
             textven = "EMPATE";
             vencedor.setText(textven);
-            contadordepartida.setVisible(true);
+           contagem = 4;
             newgame.setVisible(true);
             socket.emit("decisao", sala,{
               item: "idade",
@@ -10679,7 +10678,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 4;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "simpatia") {
@@ -11391,7 +11390,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 4;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "conhecimento") {
@@ -12104,7 +12103,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 4;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "altura") {
@@ -12815,7 +12814,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 4;
               newgame.setVisible(true);
             }
           } else if (decisao.item === "idade") {
@@ -13526,7 +13525,7 @@ cena1.create = function () {
               vencedor.setVisible(true);
               textven = "EMPATE";
               vencedor.setText(textven);
-              contadordepartida.setVisible(true);
+              contagem = 4;
               newgame.setVisible(true);
             }
           }
